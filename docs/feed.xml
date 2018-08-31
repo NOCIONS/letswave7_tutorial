@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>documentation-theme-jekyll</title>
+        <description>Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features.</description>
+        <link>http://localhost:4000/</link>
+        <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Fri, 31 Aug 2018 14:59:38 +0800</pubDate>
+        <lastBuildDate>Fri, 31 Aug 2018 14:59:38 +0800</lastBuildDate>
+        <generator>Jekyll v3.5.2</generator>
+        
+        <item>
+            <title>Figure</title>
+            <description>&lt;h2&gt;Figure&lt;/h2&gt;
+&lt;div class = &quot;content&quot;&gt;&lt;div class = 'SectionBlock containment active'&gt;&lt;div class = 'LineNodeBlock contiguous'&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;%% initialization &lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;clc;clear;close &lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;all&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;a=[4,3,1,4,3,6];&lt;/span&gt;&lt;span class = &quot;S3&quot;&gt;%mean&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;b=[0.2,0.1,0.4,0.2,0.1,0.4];&lt;/span&gt;&lt;span class = &quot;S3&quot;&gt;%std&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;%% plot the bar&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S6&quot;&gt;fig=figure();&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;bar(a,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'c'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;hold &lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;on&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;errorbar(a,b,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'k'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'LineStyle'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'none'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;%% set the xlabel&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;set(gca,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'XTick'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;,[1,2,4,6]);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;set(gca,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'XTickLabel'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,{&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'\gamma'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'\beta'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'\alpha'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'x_1'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;});&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;set(gca,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'XDir'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'reverse'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S3&quot;&gt;%% save the figure&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;set(fig,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'Position'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;,[500 0 800 600]);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;set(fig,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'PaperPositionMode'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'auto'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;saveas(fig,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'fig1.tiff'&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;, &lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'tiffn'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;saveas(fig,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'fig1.fig'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;div class = 'inlineWrapper'&gt;&lt;p class = &quot;S2 lineNode&quot;&gt;&lt;span class = &quot;S4&quot;&gt;print(&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'-dpsc2 '&lt;/span&gt;&lt;span class = &quot;S4&quot;&gt;,fig,&lt;/span&gt;&lt;span class = &quot;S5&quot;&gt;'fig1.eps'&lt;/span&gt;&lt;span class = &quot;S6&quot;&gt;);&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;07 Apr 2017&lt;/p&gt;</description>
+            <pubDate>Fri, 07 Apr 2017 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/old/2017/04/07/figure.html</link>
+            <guid isPermaLink="true">http://localhost:4000/old/2017/04/07/figure.html</guid>
+            
+            
+        </item>
+        
+        <item>
+            <title>Sample post</title>
+            <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries&lt;/p&gt;
+
+&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;p&gt;but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;
+
+&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries&lt;/p&gt;
+
+</description>
+            <pubDate>Fri, 26 Feb 2016 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/samplepost.html</link>
+            <guid isPermaLink="true">http://localhost:4000/samplepost.html</guid>
+            
+            <category>news</category>
+            
+            <category>getting_started</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Welcome to Jekyll!</title>
+            <description>&lt;p&gt;Theme updates:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Permalinks&lt;/li&gt;
+  &lt;li&gt;Kramdown&lt;/li&gt;
+  &lt;li&gt;URL specified in config file&lt;/li&gt;
+  &lt;li&gt;removed PDF output&lt;/li&gt;
+  &lt;li&gt;removed some of the alternative layouts&lt;/li&gt;
+  &lt;li&gt;added blog feature&lt;/li&gt;
+  &lt;li&gt;sidebars configurable per page&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+            <pubDate>Wed, 24 Feb 2016 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/myupdate.html</link>
+            <guid isPermaLink="true">http://localhost:4000/myupdate.html</guid>
+            
+            <category>news</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Test post from last year</title>
+            <description>&lt;p&gt;This is just a test post from the previous year.&lt;/p&gt;
+
+</description>
+            <pubDate>Sun, 12 Apr 2015 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/test-post-from-last-year.html</link>
+            <guid isPermaLink="true">http://localhost:4000/test-post-from-last-year.html</guid>
+            
+            <category>news</category>
+            
+            
+        </item>
+        
+        <item>
+            <title>Letswave的工具包依赖</title>
+            <description>&lt;h2&gt;Letswave的工具包依赖&lt;/h2&gt;
+&lt;p&gt;我的第一篇文章&lt;/p&gt;
+&lt;p&gt;20 Mar 2015&lt;/p&gt;</description>
+            <pubDate>Fri, 20 Mar 2015 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/old/2015/03/20/letswave%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8C%85%E4%BE%9D%E8%B5%96.html</link>
+            <guid isPermaLink="true">http://localhost:4000/old/2015/03/20/letswave%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8C%85%E4%BE%9D%E8%B5%96.html</guid>
+            
+            
+        </item>
+        
+        <item>
+            <title>Hello World</title>
+            <description>&lt;h2&gt;Hello World&lt;/h2&gt;
+&lt;p&gt;我的第一篇文章&lt;/p&gt;
+&lt;p&gt;25 Aug 2012&lt;/p&gt;</description>
+            <pubDate>Sat, 25 Aug 2012 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/old/2012/08/25/hello-world.html</link>
+            <guid isPermaLink="true">http://localhost:4000/old/2012/08/25/hello-world.html</guid>
+            
+            
+        </item>
+        
+    </channel>
+</rss>

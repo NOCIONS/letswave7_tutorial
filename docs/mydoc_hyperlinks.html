@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="When creating links, you can use standard HTML or Markdown formatting. However, you can also implement an automated approach to linking that makes linking mu...">
+<meta name="keywords" content="formattingnavigation,  links, hyperlinks, cross references, related links, relationship tables">
+<title>Links | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Links page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Links">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,125 +190,6 @@
 <ul id="mysidebar" class="nav" media="print">
     <li class="sidebarTitle"> </li>
     
-    
-    
-        
-    
-    <li>
-        <a href="#">Getting Started</a>
-        <ul>
-            
-            
-            
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_general_info.html">2. General Information</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_framework.html">4. Letswave Framework</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Lestwave Wiki</a>
-        <ul>
-            
-            
-            
-            <li><a href="wk_all_docs.html">1. All Documents</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_manager.html">2. Manager Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_batch.html">3. Batch Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_data_structure.html">4. Data structures</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Letswave Tutorial</a>
-        <ul>
-            
-            
-            
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -324,7 +205,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Links</h1>
 </div>
 
 
@@ -332,7 +213,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
+    <div class="summary">When creating links, you can use standard HTML or Markdown formatting. However, you can also implement an automated approach to linking that makes linking much less error-prone (meaning less chances of broken links in your output) and requiring less effort.</div>
    
 
     
@@ -360,30 +241,97 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <h2 id="create-an-external-link">Create an external link</h2>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<p>When linking to an external site, use Markdown formatting because it’s simplest:</p>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>[Google](http://google.com)
+</code></pre>
+</div>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<h2 id="linking-to-internal-pages">Linking to internal pages</h2>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<p>When linking to internal pages, you can manually link to the pages like this:</p>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>[Icons](mydoc_icons.html)
+</code></pre>
+</div>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<p>However, if you change the file name, you’ll have to update all of your links. It’s much easier to use Automated links, as described in the next section.</p>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<h2 id="automatedlinks">Automated links</h2>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<p>This method for automated links creates a master list of all links in a Markdown reference format based on entries in your sidebar table of contents.</p>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<p>With this Automated links method, make sure all your pages are referenced in a sidebar or topnav data file (inside _data &gt; sidebars). If they’re not in a sidebar or top nav (such as links to headings on a page), list them in the <code class="highlighter-rouge">other.yml</code> file (which is in the _data/sidebars folder).</p>
+
+<p>The links.html file (in _includes) will iterate through all your sidebars and create a list of reference-style markdown links based on the <code class="highlighter-rouge">url</code> properties in the sidebar items.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> For the automated links method to work, each of your pages must have a <code class="highlighter-rouge">permalink</code> property in the frontmatter. The <code class="highlighter-rouge">permalink</code> property must match the file name. For example, if the file name is <code class="highlighter-rouge">somefile.html</code>, your permalink property would be <code class="highlighter-rouge">somefile.html</code>. See [Pages][mydoc_pages] for more details.</div>
+
+<p>To implement managed links:</p>
+
+<ol>
+  <li>
+    <p>In your _config.yml file, list each sidebar in the <code class="highlighter-rouge">sidebars</code> property — including the other.yml file too:</p>
+
+    <div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">sidebars</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="s">home_sidebar</span>
+<span class="pi">-</span> <span class="s">mydoc_sidebar</span>
+<span class="pi">-</span> <span class="s">product1_sidebar</span>
+<span class="pi">-</span> <span class="s">product2_sidebar</span>
+<span class="pi">-</span> <span class="s">other</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>At the bottom of each topic where you plan to include links, include the links.html file:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="err">%</span><span class="w"> </span><span class="err">include</span><span class="w"> </span><span class="err">links.html</span><span class="w"> </span><span class="err">%</span><span class="p">}</span><span class="w">
+</span></code></pre>
+    </div>
+  </li>
+  <li>
+    <p>To link to a topic, use reference-style Markdown links, with the referent using the file name (without the file extension). For example:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>See the [Icon][mydoc_icons] file.
+</code></pre>
+    </div>
+
+    <p>Here’s the result:</p>
+
+    <p>See the [Icon][mydoc_icons] file.</p>
+
+    <p>If the link doesn’t render, check to make sure the page is correctly listed in the sidebar.</p>
+  </li>
+</ol>
+
+<h2 id="bookmarklinks">Automated links to headings on pages</h2>
+
+<p>If you’re linking to the specific heading from another page, first give the heading an ID:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>## Some heading {#someheading}
+</code></pre>
+</div>
+
+<p>Then add a property into the other.yml file in your _data/sidebars folder:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code>    <span class="pi">-</span> <span class="s">title</span><span class="pi">:</span> <span class="s">Some link bookmark</span>
+      <span class="s">url</span><span class="pi">:</span> <span class="s">/mydoc_pages.html#someIdTag</span>
+</code></pre>
+</div>
+
+<p>And reference it like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>This is [Some link][mydoc_pages.html#someIdTag].
+</code></pre>
+</div>
+
+<p><strong>Result:</strong></p>
+
+<p>This is [Some link][mydoc_pages.html#someIdTag].</p>
+
+<p>It’s a little strange having the <code class="highlighter-rouge">.html#</code> in a reference like this, but it works.</p>
 
 
 
@@ -393,7 +341,11 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
         
         
         
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        <a href="tag_formatting.html" class="btn btn-default navbar-btn cursorNorm" role="button">formatting</a>
+        
+        
+        
+        <a href="tag_navigation.html" class="btn btn-default navbar-btn cursorNorm" role="button">navigation</a>
         
         
         
@@ -412,6 +364,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
+				<span>Page last updated:</span> July 3, 2016<br/>
 				 Site last generated: Aug 31, 2018<br/>
 				</span>
                 </div>

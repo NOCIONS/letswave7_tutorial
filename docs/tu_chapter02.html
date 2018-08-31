@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 02. Preprocessing | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Chapter 02. Preprocessing page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 02. Preprocessing">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -200,7 +200,7 @@
             
             
             
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
+            <li><a href="index.html">1. Welcome to Letswave</a></li>
             
             
             
@@ -300,7 +300,57 @@
             
             
             
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
+            <li><a href="tu_multiple_subject.html">4. Script Writing</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Single Subject Analysis</a>
+        <ul>
+            
+            
+            
+            <li><a href="tu_chapter01.html">01. Data Import</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="tu_chapter02.html">02. Preprocessing</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter03.html">03. ICA Decomposing</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter04.html">04. Time Domain Analysis</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter05.html">05. Time-Frequency Analysis</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter06.html">06. Result Observation</a></li>
             
             
             
@@ -324,15 +374,13 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Chapter 02. Preprocessing</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
    
 
     
@@ -360,42 +408,50 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <p>Raw EEG signal is noisy.  Preprocessing is quite necessary to improve the signal noise ratio to obtain a “clear” EEG data. While, it is almost impossible to completely distinguish between noise and signals. The signal and noise are always mixed together in EEG signal. In some steps, some artifact can be easily indentified and removed. While some steps may filter out part of the signals while denoising. Further, some steps would even introduce some noise.</p>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<p>For beginners, it is always desired to have a standard operating procedure and universal parameter settings in the EEG analysis. Unfortunately, there is no standard procedure in the EEG preprocessing. The signal in certain frequency band is the object for analysis in one experiment, may be treated as a interference factor in another experiment. In addition, some operations still need the experience of the operator, like which epoch should reject, which channel should be interpolated and which component should be rejected in ICA. Hence, it is hard to say some processes is correct or not. Instead, it normally says that the operation is appreciated or reasonable.</p>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<p>Normally, we still have some princples in the EEG signal preprocessing. The commonly used methods for denoising in preprocessing are listed as follows,</p>
+<ul>
+  <li>Channel location assignment</li>
+  <li>Useless channels removing</li>
+  <li>Frequency filtering</li>
+  <li>Bad electrodes interpolation</li>
+  <li>Segmentation/Epoching</li>
+  <li>Artifact rejection</li>
+  <li>ICA decomposing for artifacts removal</li>
+  <li>Rereference</li>
+  <li>Baseline correction</li>
+</ul>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<p>For the P300 dataset, we will introduce the operation of all these methods and the princples in the use of these methods would be disscussed. ICA decomposing would be introduced separately in chapter 03. And some other methods, as epoching, artifacts rejection, rereference, and baseline correction would be introduced in chapter 04 with the time domain analysis together.</p>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<h2 id="step-1-channel-location-assignment">Step 1. Channel location assignment</h2>
+<p>The work of channel location assignment is to assign the coordinate information for each channel in the dataset. Letswave would automaticly assign the channel location with commonly used <a href="https://en.wikipedia.org/wiki/10%E2%80%9320_system_(EEG)">10-20 system</a>. While in different EEG recording system, the coordinate of the same channel would be silghtly different. If you find the automatic assigned coordinate is not correct, or the channel in your dataset does not follow the 10-20 system, Letswave7 still allows you to manually assign the channel location.</p>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<p>If you want to manually assign the channel location, you can do the following steps. Select the dataset “<strong><em>sub093</em></strong>”” in the data list of the manager module, and click <strong>Edit-&gt;Electrodes-&gt;Edit electrode coordinates</strong> in the menu. In the batch module, it is shown that the default assigned location file is “Standard-10-20-Cap81.locs”. Press the button “<strong>Select custom file with channel location</strong>” to select the custom file for channel location. In the folder of <strong><em>electrodes</em></strong> in Lestwave7, there are several channel location files for different EEG recording system. You can also assign your own channel location file, if all these files are not appreciated. Click the button <strong>Run</strong> in the bottom of batch module, and then a new dataset with the name “<strong><em>chanlocs sub093</em></strong>” will be appeared in the data list of the manager module. Since the automatic assigned channel location in our dataset is OK, the step of channel location assignment is <strong>ommitted</strong> in the preprocessing of P300 dataset.<br />
+<img src="images/tu_chapter02/Fig009a.png" alt="Channel location assignment" /></p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<h2 id="step-2-useless-channels-removing">Step 2. Useless channels removing</h2>
+<p>Sometimes, there would be some useless channels also recorded in the dataset. To make a efficient analysis and also save the storage space, we need to remove the useless channels. Here, we will show the removing of channel <strong><em>IO</em></strong>, which recordes the <a href="https://en.wikipedia.org/wiki/Electrooculography">electrooculogram (EOG)</a> signals. For ocular artifact removal, EOG signals is necessary for Graton and coles’ method. By with the ICA method, EOG signal is nor necessary. To remove channel <strong><em>IO</em></strong>, we can select the dataset “<strong><em>sub093</em></strong>”” in the data list of the manager module, and click <strong>Edit-&gt;Arrange signals-&gt;Rearrange or delete epochs, channels, indexes</strong> in the menu. In the batch module, press the button <strong>Add all</strong> to add all the channels into left listbox. Then select channel <strong><em>IO</em></strong> and press button <strong>Remove</strong> to delete channel <strong><em>IO</em></strong>. Click the button <strong>Run</strong> in the bottom of batch module, and then a new dataset with the name “<strong><em>sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_chapter02/Fig010.png" alt="Channels Removing1" />
+<img src="images/tu_chapter02/Fig011.png" alt="Channels Removing2" /></p>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<h2 id="step-3-frequency-filtering">Step 3. Frequency filtering</h2>
+<p>Frequency filtering is a effective way to filtered out the high frequency arfifact, low frequency drifts and the 50/60Hz power-line interference. In letswave, the Butterworth IIR filter is applied for frequency filtering.</p>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<p>For the P300 dataset, since the positive component around 300ms is a slow wave, hence we bandpass filter as 0.05-30Hz. No notch filter for the 50Hz power-line interference would be applied, because it is already outside the range of the bandpass filter. Select the dataset “<strong><em>sel_chan sub093</em></strong>”” in the data list of the manager module, and click <strong>Process-&gt;Frequency analysis and filters-&gt;Butterworth filters</strong> in the menu. In the batch module, set the low cutoff frequency(Hz) as <strong>0.05Hz</strong>, and click the button <strong>Run</strong> to run the bandpass filtering. A new dataset with the name “<strong><em>butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_chapter02/Fig017.png" alt="Frequency Filtering" /></p>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<h2 id="step-4-bad-electrodes-interpolation">Step 4. Bad electrodes interpolation</h2>
+<p>It is find channel P1 is bad when we check the imported raw data. In this step, we will interpolate channel P1 with the surround channels.</p>
 
+<p>Select the dataset “<strong><em>butt sel_chan sub093</em></strong>”” in the data list of the manager module, and click <strong>Edit-&gt;Electrodes-&gt;Interpolate channel using neighbouring electrodes</strong> in the menu. In the batch module, select channel <strong><em>P1</em></strong> in the <strong>Channel to Interpolate</strong> list box, then click the button <strong>Find cloest electrodes</strong>. Since the <strong>Number of channels used for interpolation</strong> is <strong><em>3</em></strong> for the default setting, Letswave7 will find the closest electrodes “<strong><em>P3</em></strong>”, “<strong><em>Pz</em></strong>”, and “<strong><em>CP1</em></strong>” for interpolation automatically accroding to the location of the channels. Click the button <strong>Run</strong> for the bad electrodes interpolation. A new dataset with the name “<strong><em>chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_chapter02/Fig020.png" alt="Electrodes Interpolation" /></p>
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
-        
-        
         
     </div>
 

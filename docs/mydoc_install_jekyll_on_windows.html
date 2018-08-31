@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="">
+<meta name="keywords" content=" jekyll on windows, pc, ruby, ruby dev kit">
+<title>Install Jekyll on Windows | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Install Jekyll on Windows page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Install Jekyll on Windows">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,125 +190,6 @@
 <ul id="mysidebar" class="nav" media="print">
     <li class="sidebarTitle"> </li>
     
-    
-    
-        
-    
-    <li>
-        <a href="#">Getting Started</a>
-        <ul>
-            
-            
-            
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_general_info.html">2. General Information</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_framework.html">4. Letswave Framework</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Lestwave Wiki</a>
-        <ul>
-            
-            
-            
-            <li><a href="wk_all_docs.html">1. All Documents</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_manager.html">2. Manager Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_batch.html">3. Batch Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_data_structure.html">4. Data structures</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Letswave Tutorial</a>
-        <ul>
-            
-            
-            
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -324,15 +205,13 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Install Jekyll on Windows</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
    
 
     
@@ -360,42 +239,122 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip:</b> For a better terminal emulator on Windows, use <a href="https://git-for-windows.github.io/">Git Bash</a>. Git Bash gives you Linux-like control on Windows.</div>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<h2 id="install-ruby">Install Ruby</h2>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<p>First you must install Ruby because Jekyll is a Ruby-based program and needs Ruby to run.</p>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<ol>
+  <li>Go to <a href="http://rubyinstaller.org/downloads/">RubyInstaller for Windows</a>.</li>
+  <li>Under <strong>RubyInstallers</strong>, download and install one of the Ruby installers (usually one of the first two options).</li>
+  <li>Double-click the downloaded file and proceed through the wizard to install it.</li>
+</ol>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<h2 id="install-ruby-development-kit">Install Ruby Development Kit</h2>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<p>Some extensions Jekyll uses require you to natively build the code using the Ruby Development Kit.</p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<ol>
+  <li>Go to <a href="http://rubyinstaller.org/downloads/">RubyInstaller for Windows</a>.</li>
+  <li>Under the <strong>Development Kit</strong> section near the bottom, download one of the <strong>For use with Ruby 2.0 and above…</strong> options (either the 32-bit or 64-bit version).</li>
+  <li>Move your downloaded file onto your <strong>C</strong> drive in a folder called something like <strong>RubyDevKit</strong>.</li>
+  <li>Extract the compressed folder’s contents into the folder.</li>
+  <li>
+    <p>Browse to the <strong>RubyDevKit</strong> location on your C drive using your Command Line Prompt.</p>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+    <p>To see the contents of your current directory, type <code>dir</code>. To move into a directory, type <code>cd foldername</code>, where “foldername” is the name of the folder you want to enter. To move up a directory, type <code>cd ../</code> one or more times depending on how many levels you want to move up. To move into your user’s directory, type <code>/users</code>. The <code>/</code> at the beginning of the path automatically starts you at the root.</p>
+  </li>
+  <li>Type <code class="highlighter-rouge">ruby dk.rb init</code></li>
+  <li>Type <code class="highlighter-rouge">ruby dk.rb install</code></li>
+</ol>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<p>If you get stuck, see the <a href="https://github.com/oneclick/rubyinstaller/wiki/Development-Kit">official instructions for installing Ruby Dev Kit</a>.</p>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<h2 id="bundler">Install the Jekyll gem</h2>
+
+<p>At this point you should have Ruby and Rubygem on your machine.</p>
+
+<p>Now use <code class="highlighter-rouge">gem</code> to install Jekyll:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gem install jekyll
+</code></pre>
+</div>
+
+<p>You can now use Jekyll to create new Jekyll sites following the quick-start instructions on <a href="http://jekyllrb.com">Jekyllrb.com</a>.</p>
+
+<h2 id="installing-dependencies-through-bundler">Installing dependencies through Bundler</h2>
+
+<p>Some Jekyll themes will require certain Ruby gem dependencies. These dependencies are stored in something called a Gemfile, which is packaged with the Jekyll theme. You can install these dependencies through Bundler. (Although you don’t need to install Bundler for this Documentation theme, it’s a good idea to do so.)</p>
+
+<p><a href="http://bundler.io/">Bundler</a> is a package manager for RubyGems. You can use it to get all the gems (or Ruby plugins) that you need for your Jekyll project.</p>
+
+<p>You install Bundler by using the gem command with RubyGems:</p>
+
+<h2 id="install-bundler">Install Bundler</h2>
+
+<ol>
+  <li>Install Bundler: <code class="highlighter-rouge">gem install bundler</code></li>
+  <li>
+    <p>Initialize Bundler: <code class="highlighter-rouge">bundle init</code></p>
+
+    <p>This will create a new Gemfile.</p>
+  </li>
+  <li>
+    <p>Open the Gemfile in a text editor.</p>
+
+    <p>Typically you can open files from the Command Prompt by just typing the filename, but because Gemfile doesn’t have a file extension, no program will automatically open it. You may need to use your File Explorer and browse to the directory, and then open the Gemfile in a text editor such as Notepad.</p>
+  </li>
+  <li>
+    <p>Remove the existing contents. Then paste in the following:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>source "https://rubygems.org"
+
+gem 'wdm'
+gem 'jekyll'
+</code></pre>
+    </div>
+    <p>The <a href="https://rubygems.org/gems/wdm/versions/0.1.1">wdm gem</a> allows for the polling of the directory and rebuilding of the Jekyll site when you make changes. This gem is needed for Windows users, not Mac users.</p>
+  </li>
+  <li>Save and close the file.</li>
+  <li>
+    <p>Type <code class="highlighter-rouge">bundle install</code>.</p>
+
+    <p>Bundle retrieves all the needed gems and gem dependencies and downloads them to your computer. At this time, Bundle also takes a snapshot of all the gems used in your project and creates a Gemfile.lock file to store this information.</p>
+  </li>
+</ol>
+
+<h2 id="git-clients-for-windows">Git Clients for Windows</h2>
+
+<p>Although you can use the default command prompt with Windows, it’s recommended that you use <a href="https://git-for-windows.github.io/">Git Bash</a> instead. The Git Bash client will allow you to run shell scripts and execute other Unix commands.</p>
+
+<h2 id="serve-the-jekyll-documentation-theme">Serve the Jekyll Documentation theme</h2>
+
+<ol>
+  <li>Browse to the directory where you downloaded the Documentation theme for Jekyll.</li>
+  <li>Type <code class="highlighter-rouge">jekyll serve</code></li>
+  <li>
+    <p>Go to the preview address in the browser. (Make sure you include the <code class="highlighter-rouge">/</code> at the end.)</p>
+
+    <p>Unfortunately, the Command Prompt doesn’t allow you to easily copy and paste the URL, so you’ll have to type it manually.</p>
+  </li>
+</ol>
+
+<h2 id="githuberror">Resolving Github Metadata errors</h2>
+
+<p>After making an edit, Jekyll auto-rebuilds the site. If you have the Gemfile in the theme with the github-pages gem, you may see the following error:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
+</code></pre>
+</div>
+
+<p>If so, you will need to take some additional steps to resolve it. (Note that this error only appears if you have the github-pages gem in your gemfile.) The resolution involves adding a Github token and a cert file.</p>
+
+<p>See this post on <a href="http://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html">Knight Codes</a> for instructions on how to fix the error. You basically generate a personal token on Github and set it as a system variable. You also download a certification file and set it as a system variable. This resolves the issue.</p>
 
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
-        
-        
         
     </div>
 

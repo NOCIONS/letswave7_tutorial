@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="You can automatically link together topics belonging to the same series. This helps users know the context within a particular process.">
+<meta name="keywords" content="content_types,  series, connected articles, tutorials, hello world">
+<title>Series | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Series page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Series">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,125 +190,6 @@
 <ul id="mysidebar" class="nav" media="print">
     <li class="sidebarTitle"> </li>
     
-    
-    
-        
-    
-    <li>
-        <a href="#">Getting Started</a>
-        <ul>
-            
-            
-            
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_general_info.html">2. General Information</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_framework.html">4. Letswave Framework</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Lestwave Wiki</a>
-        <ul>
-            
-            
-            
-            <li><a href="wk_all_docs.html">1. All Documents</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_manager.html">2. Manager Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_batch.html">3. Batch Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_data_structure.html">4. Data structures</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Letswave Tutorial</a>
-        <ul>
-            
-            
-            
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -324,7 +205,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Series</h1>
 </div>
 
 
@@ -332,7 +213,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
+    <div class="summary">You can automatically link together topics belonging to the same series. This helps users know the context within a particular process.</div>
    
 
     
@@ -360,30 +241,97 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <h2 id="using-series-for-pages">Using series for pages</h2>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<p>You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here’s a <a href="mydoc_seriesdemo1.html">demo</a>.</p>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<h2 id="1-create-the-series-button">1. Create the series button</h2>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<p>First create an include that contains your series button:</p>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"seriesContext"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">class=</span><span class="s">"btn btn-primary dropdown-toggle"</span><span class="nt">&gt;</span>Series Demo <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span><span class="nt">&gt;</span>
+            {% assign pages = site.pages | sort:"weight"  %}
+            {% for p in pages %}
+            {% if p.series == "ACME series" %}
+            {% if p.url == page.url %}
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span> → {{p.weight}}. {{p.title}}<span class="nt">&lt;/li&gt;</span>
+            {% else %}
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{p.url | remove: "</span><span class="err">/"}}"</span><span class="nt">&gt;</span>{{p.weight}}. {{p.title}}<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        <span class="nt">&lt;/ol&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<p>Change “ACME series” to the name of your series.</p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<p>Save this in your _includes/custom folder as something like series_acme.html.</p>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning:</b> With pages, there isn’t a universal namespace created from tags or categories like there is with Jekyll posts. As a result, you have to loop through all pages. If you have a lot of pages in your site (e.g., 1,000+), then this looping will create a slow build time. If this is the case, you will need to rethink the approach to looping here.</div>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<h2 id="2-create-the-next-include">2. Create the “next” include</h2>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<p>Now create another include for the Next button at the bottom of the page. Copy the following code, changing the series name to your series’name:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>{% assign series_pages = site.tags.series_acme %}
+    {% for p in pages %}
+    {% if p.series == "ACME series" %}
+    {% assign nextTopic = page.weight | plus: "1"  %}
+    {% if p.weight == nextTopic  %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{p.url}}"</span><span class="nt">&gt;&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Next: {{p.weight}}  {{p.title}}<span class="nt">&lt;/button&gt;&lt;/a&gt;</span>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+</div>
+
+<p>Change “acme” to the name of your series.</p>
+
+<p>Save this in your _includes/custom/mydoc folder as series_acme_next.html.</p>
+
+<h2 id="3-add-the-correct-frontmatter-to-each-of-your-series-pages">3. Add the correct frontmatter to each of your series pages</h2>
+
+<p>Now add the following frontmatter to each page in the series:</p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="err">series:</span><span class="w"> </span><span class="s2">"ACME series"</span><span class="w">
+</span><span class="err">weight:</span><span class="w"> </span><span class="mf">1.0</span><span class="w">
+</span></code></pre>
+</div>
+
+<p>With weights, Jekyll will treat 10 as coming after 1. If you have more than 10 items, consider changing <code class="highlighter-rouge">plus: "1.0"</code> to <code class="highlighter-rouge">plus: "0.1"</code>.</p>
+
+<p>Additionally, if your page names are prefaced with numbers, such as “1. Download the code,” then the <code class="highlighter-rouge"><span class="p">{</span><span class="err">{p.weight</span><span class="p">}</span><span class="err">}</span></code> will create a duplicate number. In that case, just remove the <code class="highlighter-rouge"><span class="p">{</span><span class="err">{p.weight</span><span class="p">}</span><span class="err">}</span></code> from both code samples here.</p>
+
+<h2 id="4-add-links-to-the-series-button-and-next-button-on-each-page">4. Add links to the series button and next button on each page.</h2>
+
+<p>On each series page, add a link to the series button at the top and a link to the next button at the bottom.</p>
+
+<div class="language-liquid highlighter-rouge"><pre class="highlight"><code>&lt;!-- your frontmatter goes here --&gt;
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">custom/series_acme</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
+
+&lt;!-- your page content goes here ... --&gt;
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="na">custom/series_acme_next</span><span class="p">.</span><span class="na">html</span><span class="w"> </span><span class="p">%}</span>
+</code></pre>
+</div>
+
+<h2 id="changing-the-series-drop-down-color">Changing the series drop-down color</h2>
+
+<p>The Bootstrap menu uses the <code class="highlighter-rouge">primary</code> class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of <code class="highlighter-rouge">btn-primary</code>, use <code class="highlighter-rouge">btn-info</code> or <code class="highlighter-rouge">btn-warning</code>. See [Labels][mydoc_labels] for more Bootstrap button classes.</p>
+
+<h2 id="using-a-collection-with-your-series">Using a collection with your series</h2>
+
+<p>Instead of copying and pasting the button includes on each of your series, you could also create a collection and define a layout for the collection that has the include code. For more information on creating collections, see [Collections][mydoc_collections] for more details.</p>
 
 
 
@@ -393,7 +341,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
         
         
         
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        <a href="tag_content_types.html" class="btn btn-default navbar-btn cursorNorm" role="button">content_types</a>
         
         
         
@@ -412,6 +360,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
+				<span>Page last updated:</span> July 3, 2016<br/>
 				 Site last generated: Aug 31, 2018<br/>
 				</span>
                 </div>

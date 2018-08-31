@@ -1,0 +1,14 @@
+
+.content1{
+    width:100%;
+    margin:0 auto;
+    text-align:justify;
+}
+.leftDiv1{
+    position:absolute;
+    padding:15px 5px 15px 20px;
+}
+.rightDiv1{
+    margin-left:160px;
+    padding:15px 50px 15px 5px;
+} 

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="Collections are useful if you want to loop through a special folder of pages that you make available in a content API. You could also use collections if you ...">
+<meta name="keywords" content="content_types,  groups, api, structure">
+<title>Collections | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Collections page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Collections">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,125 +190,6 @@
 <ul id="mysidebar" class="nav" media="print">
     <li class="sidebarTitle"> </li>
     
-    
-    
-        
-    
-    <li>
-        <a href="#">Getting Started</a>
-        <ul>
-            
-            
-            
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_general_info.html">2. General Information</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_framework.html">4. Letswave Framework</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Lestwave Wiki</a>
-        <ul>
-            
-            
-            
-            <li><a href="wk_all_docs.html">1. All Documents</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_manager.html">2. Manager Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_batch.html">3. Batch Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_data_structure.html">4. Data structures</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Letswave Tutorial</a>
-        <ul>
-            
-            
-            
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -324,7 +205,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Collections</h1>
 </div>
 
 
@@ -332,7 +213,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
+    <div class="summary">Collections are useful if you want to loop through a special folder of pages that you make available in a content API. You could also use collections if you have a set of articles that you want to treat differently from the other content, with a different layout or format.</div>
    
 
     
@@ -360,30 +241,33 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <h2 id="what-are-collections">What are collections</h2>
+<p>Collections are custom content types different from pages and posts. You might create a collection if you want to treat a specific set of articles in a unique way, such as with a custom layout or listing. For more detail on collections, see <a href="http://ben.balter.com/2016/02/20/jekyll-collections/">Ben Balter’s explanation of collections here</a>.</p>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<h2 id="create-a-collection">Create a collection</h2>
+<p>To create a collection, add the following in your configuration file:</p>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>collections:
+  tooltips:
+    output: true
+</code></pre>
+</div>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<p>In this example, “tooltips”” is the name of the collection.</p>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<h2 id="interacting-with-collections">Interacting with collections</h2>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<p>You can interact with collections by using the <code class="highlighter-rouge">site.collectionname</code> namespace, where <code class="highlighter-rouge">collectionname</code> is what you’ve configured. In this case, if I wanted to loop through all tooltips, I would use <code class="highlighter-rouge">site.tooltips</code> instead of <code class="highlighter-rouge">site.pages</code> or <code class="highlighter-rouge">site.posts</code>.</p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<p>See <a href="http://jekyllrb.com/docs/collections/">Collections in the Jekyll documentation</a> for more information.</p>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<h2 id="how-to-use-collections">How to use collections</h2>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<p>I haven’t found a huge use for collections in normal documentation. However, I did find a use for collections in generating a tooltip file that would be used for delivering tooltips to a user interface from text files in the documentation. See [Help APIs and UI tooltips][mydoc_help_api] for details.</p>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<h2 id="video-tutorial-on-collections">Video tutorial on collections</h2>
+
+<p>See this <a href="http://jekyll.tips/jekyll-casts/introduction-to-collections/">video tutorial on Jekyll.tips</a> for more details on collections.</p>
 
 
 
@@ -393,7 +277,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
         
         
         
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        <a href="tag_content_types.html" class="btn btn-default navbar-btn cursorNorm" role="button">content_types</a>
         
         
         
@@ -412,6 +296,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
+				<span>Page last updated:</span> July 3, 2016<br/>
 				 Site last generated: Aug 31, 2018<br/>
 				</span>
                 </div>

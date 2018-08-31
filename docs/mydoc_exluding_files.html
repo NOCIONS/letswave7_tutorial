@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="By default, all the files in your Jekyll project are included in the output (this differs from DITA projects, which don't include files unless noted on the m...">
+<meta name="keywords" content="single_sourcing,  exclusion, separating outputs, removing files from outputs">
+<title>Excluding files | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Excluding files page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Excluding files">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -190,125 +190,6 @@
 <ul id="mysidebar" class="nav" media="print">
     <li class="sidebarTitle"> </li>
     
-    
-    
-        
-    
-    <li>
-        <a href="#">Getting Started</a>
-        <ul>
-            
-            
-            
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_general_info.html">2. General Information</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="gs_framework.html">4. Letswave Framework</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Lestwave Wiki</a>
-        <ul>
-            
-            
-            
-            <li><a href="wk_all_docs.html">1. All Documents</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_manager.html">2. Manager Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_LW_batch.html">3. Batch Module</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="wk_data_structure.html">4. Data structures</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Letswave Tutorial</a>
-        <ul>
-            
-            
-            
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
-            
-            
-            
-            
-            
-            
-            <li><a href="tu_multiple_subject.html">4. Batch Processing and Script</a></li>
-            
-            
-            
-            
-        </ul>
-        
-        
-        
         <!-- if you aren't using the accordion, uncomment this block:
            <p class="external">
                <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
@@ -324,7 +205,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">Excluding files</h1>
 </div>
 
 
@@ -332,7 +213,7 @@
 <div class="post-content">
 
    
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
+    <div class="summary">By default, all the files in your Jekyll project are included in the output (this differs from DITA projects, which don't include files unless noted on the map). If you're single sourcing, you'll need to exclude the files that shouldn't be included in the output. The sidebar doesn't control inclusion or exclusion.</div>
    
 
     
@@ -360,30 +241,82 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <h2 id="about-exclusion">About exclusion</h2>
+<p>By default, all files in your project are included in your output (regardless of whether they’re listed in the sidebar_doc.yml file or not). To exclude files, note them in the <code class="highlighter-rouge">exclude</code> section in the configuration file. Here’s a sample:</p>
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+exclude:
+  - mydoc_writers_*
+  - bower_components
+  - Gemfile
+</code></pre>
+</div>
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
+<p>If you have different outputs for your site, you’ll want to customize the exclude sections in your various configuration files.</p>
 
-<h2 id="download-and-setup">Download and setup</h2>
+<h2 id="exclude-strategies">Exclude strategies</h2>
+<p>Here’s the process I recommend. Put all files in the root directory of your project. Suppose one project’s name is alpha and the other is beta. Then name each file as follows:</p>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<ul>
+  <li>alpha_sample.html</li>
+  <li>beta_sample.html</li>
+</ul>
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
+<p>In your exclude list for your beta project, specify it as follows:</p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
+- alpha_*
+</code></pre>
+</div>
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+<p>In your exclude list for your alpha project, specify it as follows:</p>
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
+- beta_*
+</code></pre>
+</div>
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+<p>If you have more sophisticated exclusion, add another level to your file names. For example, if you have different programming languages you want to filter by, add this:</p>
+
+<ul>
+  <li>alpha_java_sample.html</li>
+  <li>alpha_cpp_sample.html</li>
+</ul>
+
+<p>Then you exclude files for your Alpha C++ project as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
+
+- alpha_java_*
+- beta_*
+</code></pre>
+</div>
+
+<p>And you exclude files for your Alpha Java project as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
+
+- alpha_cpp_*
+- alpha_beta_*
+</code></pre>
+</div>
+
+<p>When you exclude folders, include the trailing slash at the end of the folder name:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>exclude:
+- images/alpha/
+</code></pre>
+</div>
+
+<p>There isn’t a way to automatically exclude anything. By default, everything is included unless you explicitly list it under the exclude section.</p>
+
+<h2 id="excluding-draft-content">Excluding draft content</h2>
+
+<p>If you’re working on a draft, put it inside the _drafts folder or add <code class="highlighter-rouge">published: false</code> in the frontmatter. The _drafts folder is excluded by default, so you don’t have to specify it in your exclude list.</p>
+
+<h2 id="limitations">Limitations</h2>
+
+<p>What if a file should appear in two projects but not the third? This can get tricky. For some files, rather than using a wildcard, you may need to manually specify the entire filename that you’re excluding instead of excluding it by way of a wildcard pattern.</p>
 
 
 
@@ -393,7 +326,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
         
         
         
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
+        <a href="tag_single_sourcing.html" class="btn btn-default navbar-btn cursorNorm" role="button">single_sourcing</a>
         
         
         
@@ -412,6 +345,7 @@ Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB plat
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
+				<span>Page last updated:</span> July 3, 2016<br/>
 				 Site last generated: Aug 31, 2018<br/>
 				</span>
                 </div>

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave...">
-<meta name="keywords" content="getting_started,  start Letswave homepage">
-<title>Letswave | Letswave for documentation</title>
+<meta name="description" content="">
+<meta name="keywords" content=" news, blog, updates, release notes, announcements">
+<title>News | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -96,7 +96,7 @@
                 
                 
                 
-                <li><a href="news">News</a></li>
+                <li class="active"><a href="news">News</a></li>
                 
                 
                 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Letswave page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the News page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Letswave">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="News">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -200,7 +200,7 @@
             
             
             
-            <li class="active"><a href="index.html">1. Welcome to Letswave</a></li>
+            <li><a href="index.html">1. Welcome to Letswave</a></li>
             
             
             
@@ -324,7 +324,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Letswave</h1>
+   <h1 class="post-title-main">News</h1>
 </div>
 
 
@@ -332,70 +332,106 @@
 <div class="post-content">
 
    
-    <div class="summary">Letswave is a free software toolbox to analyze electroencephalographic (EEG), working on Windows, Mac OSX, and Linux or Unix. The current version is Letswave 7. Click <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">here</a> to download.</div>
-   
-
-    
-    
-<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-/* this offset helps account for the space taken up by the floating toolbar. */
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
 
     
 
-  <h2 id="welcome-to-letswave">Welcome to Letswave</h2>
+  <div class="home">
 
-<p>Letswave provides multiple functions of the neurophysiological signals processing. It supports data import from mainstream EEG amplifier, provides multiple function for data preprocessing and time and frequency domain signal analysis. The user-friendly GUI makes it easy for file management, batch operation, statistical analysis, and figure generating for publication. The interactive GUI design makes the data observation and comparison simpler and more intuitive in every step of the signal processing. The script autogenerating feature greatly reduced the gap between the GUI-based users and script-based users. As compared to other signal processing toolboxes, Letswave is an intuitive and streamlined tool to process and visualize EEG data, with a shallow learning curve.</p>
+    <div class="post-list">
+        
 
-<p><img src="/images/1_getting_started/introduction.png" alt="introduction" /></p>
 
-<h2 id="download-and-setup">Download and setup</h2>
+    <h2><a class="post-link" href="old20170407figure.html">Figure</a></h2>
+        <span class="post-meta">Apr 7, 2017 /
+            </span>
+        <p> Figure %% initialization clc;clear;close all;<span... </p>
 
-<h3 id="download">Download</h3>
-<p>You can download the package directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>.<br />
-The old version Letswave 6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+        
 
-<h3 id="setup">Setup</h3>
-<p>Unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “letswave7” in the commond windows of Matlab to check whether the install is successful or not.</p>
 
-<p>Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
+    <h2><a class="post-link" href="samplepost.html">Sample post</a></h2>
+        <span class="post-meta">Feb 26, 2016 /
+            
 
-<h2 id="authors-and-contributors">Authors and Contributors</h2>
+                <a href="tag_news.html">news</a>, 
 
-<p>The project is managed by André Mouraux (Institute of Neuroscience, Université catholique de Louvain, Belgium), in collaboration with Gan Huang and Bruno Rossion (Institute of Neuroscience, Université catholique de Louvain), Li Hu (Southwest University, China) and Giandomenico Iannetti (University College London, UK). It borrows a number of functions from the Fieldtrip toolbox (F.C. Donders Institute), and EEGLAB (Swartz Center for Computational Neuroscience).</p>
+                
 
-<h2 id="feedback">Feedback</h2>
-<p>The project is now hosted on the <a href="https://github.com/NOCIONS/letswave7/">NOCIONS GITHUB</a>.
-Please use the <a href="https://github.com/NOCIONS/letswave7/issues">GITHUB platform</a> to report issues and submit requests.</p>
+                <a href="tag_getting_started.html">getting_started</a>
 
+                </span>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries... </p>
+
+        
+
+
+    <h2><a class="post-link" href="myupdate.html">Welcome to Jekyll!</a></h2>
+        <span class="post-meta">Feb 24, 2016 /
+            
+
+                <a href="tag_news.html">news</a>
+
+                </span>
+        <p> Theme updates:
+
+
+  Permalinks
+  Kramdown
+  URL specified in config file
+  removed PDF output
+  removed some of the alternative layouts
+  added blog feature
+  sidebars configurable per page
+
+
+ </p>
+
+        
+
+
+    <h2><a class="post-link" href="test-post-from-last-year.html">Test post from last year</a></h2>
+        <span class="post-meta">Apr 12, 2015 /
+            
+
+                <a href="tag_news.html">news</a>
+
+                </span>
+        <p> This is just a test post from the previous year.
+
+ </p>
+
+        
+
+
+    <h2><a class="post-link" href="old20150320letswave%E7%9A%84%E5%B7%A5%E5%85%B7%E5%8C%85%E4%BE%9D%E8%B5%96.html">Letswave的工具包依赖</a></h2>
+        <span class="post-meta">Mar 20, 2015 /
+            </span>
+        <p> Letswave的工具包依赖
+我的第一篇文章
+20 Mar 2015 </p>
+
+        
+
+
+    <h2><a class="post-link" href="old20120825hello-world.html">Hello World</a></h2>
+        <span class="post-meta">Aug 25, 2012 /
+            </span>
+        <p> Hello World
+我的第一篇文章
+25 Aug 2012 </p>
+
+        
+
+        <p><a href="feed.xml"" class="btn btn-primary navbar-btn cursorNorm" role="button">RSS Subscribe</a></p>
+
+<hr />
+        <p>See more posts from the <a href="news_archive.html">News Archive</a>. </p>
+
+
+</div>
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        <a href="tag_getting_started.html" class="btn btn-default navbar-btn cursorNorm" role="button">getting_started</a>
-        
-        
         
     </div>
 
