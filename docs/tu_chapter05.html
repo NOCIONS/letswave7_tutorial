@@ -408,7 +408,28 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  
+  <h2 id="general-information">General Information</h2>
+<p>Time frequency decomposition describes the change of the non-stationary EEG signal in frequency domain with the increase of time. Letswave7 provides two ways for time-frequency analysis, which are STFT (short time Fourier transform) and CWT (continues wavelets transform). STFT is compute the Fourier transform separately on each shorter segment. Hence the window length for each frequency band is the same in the STFT, which would be too short to have an accurate estimation in the lower frequency band but too long for the high frequency band to catch the nonstationary activity. Different for STFT, CWT uses different window length for different frequency band. Hence, CWT would have both good frequency resoluation for low frequency activity, and good time resoluation for high regruency activity. <br />
+<img src="images/tu_chapter05/STFT_CWT.png" alt="STFT_CWT" /></p>
+
+<h2 id="phase-locked-and-non-phase-locked">Phase-locked and Non-phase-locked</h2>
+<p>Normally, we can do the time frequency analysis before or after the time domain averaging. For time frequency decomposition before the time domain averaging, the non-phase-locked activity could be observed, but the signal would be more noise. The time frequency decomposition after the time domain averaging normally have a better signal noise ration, but the non-phase-locked activity will be lost.</p>
+
+<h2 id="tfa-in-letswave">TFA in Letswave</h2>
+<p>Here, we will show the use of CWT for time frequency analysis before the time domain averaging. Select the datasets “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Plugins-&gt;my_tfa-&gt;Averaged CWT</strong> in the menu. Keep the dafault parameter setting in the batch module, and click the button <strong>Run</strong> in the bottom of batch module for the time frequency analysis. Two new datasets with the name “<strong><em>avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg cwt bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_chapter05/Fig048.png" alt="CWT" /></p>
+
+<p>In fact, the operation of <strong>Plugins-&gt;my_tfa-&gt;Averaged CWT</strong> combines the steps of CWT and averaging together, which can be performed by <strong>Process-&gt;Frequency analysis and filters-&gt;CWT (Continous Wavelet Transform)</strong>, and <strong>Process-&gt;Average-&gt;Compute averag, std, median across epoches</strong> respectively
+in the menu. Since the time frequency analysis is time consuming and also need a larger space for storage, the computer with small memory would be easy go to the error of “out of memory”. Hence we combine the steps of time frequency analysis and averaging together for saving the storage space.</p>
+
+<h2 id="baseline-correction">Baseline Correction</h2>
+<p>After the time frequency analysis, we also need to do the baseline correction time-frequency domain as it is in time domain. Select the datasets <strong>avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</strong><em>” and “</em><strong>avg cwt bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</strong><em>”, and click <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the menu. 
+It is suggest to shrink the inverval for baseline correction in time-frequency domain. Hence, we set the <strong>-0.75</strong> to <strong>-0.25</strong> seconds as the baseline  in the bacth module. In time-frequency domain, several methods, like , can be used as baseline correction. Here, we use the default method, substraction.
+Click the button <strong>Run</strong> in the bottom of batch module for baseline correction. Two new datasets with the name “</em><strong>bl avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</strong><em>” and “</em><strong>bl avg cwt bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</strong>*” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_chapter05/Fig049.png" alt="Baseline Correction" /></p>
+
+<p>The observation of the time frequency analysis result in shown in <a href="tu_chapter06.html">chapter 06</a>. The figure generation is introducted in the next part.</p>
+
 
 
     <div class="tags">

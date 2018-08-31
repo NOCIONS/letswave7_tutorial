@@ -408,7 +408,26 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  
+  <h2 id="time-domain-result">Time Domain Result</h2>
+<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Click the <strong>view</strong> in the right-click menu, we can see the time domain result in the multiviewer for the waveform.</p>
+
+<p>Select both the two datasets and select channel <strong>Pz</strong>, we can see the result of P300 on Pz. Open the topography in the toolbar and set the cursor to <strong>0.35</strong>, we can observe the topography of P300. Since it is the reuslt from single subject, the ERP is still noisy.<br />
+<img src="images/tu_chapter06/Fig050.png" alt="Time Domain Result" /></p>
+
+<h2 id="time-frequency-domain-result">Time-Frequency Domain Result</h2>
+<p>Select datasets “<strong><em>bl avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl avg cwt  bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Click the <strong>view</strong> in the right-click menu, we can see the time frequency domain result in the multiviewer for the waveform.</p>
+
+<p>Set the separate graphs(columns) as <strong>datasets</strong>, select both the two datasets, select channel <strong>Pz</strong>, and set color range from <strong>-10</strong> to <strong>10</strong>, we can see the result of P300 on Pz in time-frequency domain.</p>
+
+<p>Open the topography and set the cursor to <strong>x=0.35</strong>, and <strong>y=3</strong>, we can observe the phase-locked P300 activity on the topography. Set the cursor to <strong>x=1</strong>, and <strong>y=4</strong>, the topography of a Event Related Desynchronization (ERD) acticity can be observated, which is a non-phase-locked response. 
+<br />
+<img src="images/tu_chapter06/Fig051.png" alt="Time-Frequency Domain Result1" /></p>
+
+<p><img src="images/tu_chapter06/Fig052.png" alt="Time-Frequency Domain Result2" /></p>
+
+<p><br /></p>
+
+<p>Until now, we finised the tutorial on the single subject analysis. For the multiple subject analysis, see the next part of tutorial.</p>
 
 
     <div class="tags">
