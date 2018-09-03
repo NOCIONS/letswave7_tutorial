@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content=" ">
-<title>Single Subject Analysis | Letswave for documentation</title>
+<title>2. Multiple Subject Analysis | Letswave for documentation</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the Single Subject Analysis page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Jekyll documentation theme feedback&body=I have some feedback about the 2. Multiple Subject Analysis page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Single Subject Analysis">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="2. Multiple Subject Analysis">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -286,21 +286,21 @@
             
             
             
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
+            <li class="active"><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
             
             
             
             
             
             
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
+            <li class="active"><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
             
             
             
             
             
             
-            <li><a href="tu_multiple_subject.html">4. Script Writing</a></li>
+            <li class="active"><a href="tu_multiple_subject.html">4. Script Writing</a></li>
             
             
             
@@ -348,9 +348,24 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Multiple Subjects Analysis</a>
+        <ul>
             
             
-            <li><a href="tu_chapter06.html">06. Result Observation</a></li>
+            
+            <li><a href="tu_chapter06.html">06. Datasets Merge</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter07.html">07. Statistical Analysis</a></li>
             
             
             
@@ -374,7 +389,7 @@
     <!-- Content Column -->
     <div class="col-md-9">
         <div class="post-header">
-   <h1 class="post-title-main">Single Subject Analysis</h1>
+   <h1 class="post-title-main">2. Multiple Subject Analysis</h1>
 </div>
 
 
@@ -408,44 +423,12 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <ol>
-  <li>Getting Started</li>
-  <li>Single Subject Data Processing
-    <ul>
-      <li>Chapter 01: Loading Data in Letswave</li>
-      <li>Chapter 02: Preprocessing</li>
-      <li>Chapter 03: ICA Decomposing</li>
-      <li>Chapter 04: Time Domain Analysis</li>
-      <li>Chapter 05: Time-Frequency Domain Analysis</li>
-    </ul>
-  </li>
-  <li>Multiple Subjects Data Processing</li>
-  <li>Statistical Analysis</li>
-  <li>Figure Genertaion</li>
-  <li>Writing Script</li>
-</ol>
+  <p>In this part, we will contionue the analysis on the datasets of P300 experiment. Based on the single subject analysis, we will focus on the multiple subject analysis here. The arrangement of the datasets and the statistical analysis will be introducted.</p>
 
-<p>This exmple will show the data preprocessing, visulizing and analysising for single subject analysis in Letswave.</p>
-
-<p>It is a dataset with Laser Evoked Potential (LEP). 25 stimulus have be performed on each hand of the subject in a random order with the marker ‘S11’ and ‘S14’</p>
-
-<p><img src="images/LW_batch1.png" alt="Main user interface" /></p>
-
-<h3 id="dataset-overview">Dataset overview</h3>
 <ul>
-  <li>The Datasets listbox lists all the datasets found in the current folder, sorted by alphabetical order. Basic information of the first dataset you selected are shown below in listbox.</li>
-  <li>The names of datasets are normally consisted by multiple affixes. Using the “include” and “exclude” listbox to magage the display of the datasets.</li>
-  <li>The toolbar is for folder management. Press the refresh button <img align="middle" src="images/refresh_btn.png" alt="refresh" style="width: 25px;" /> to refresh the dataset in the current folder. To change the current folder, press the browse for folder button <img align="middle" src="images/browse_btn.png" alt="browse for folder" style="width: 25px;" /> or type the address directly in the address bar. Matlab’s current folder will also be changed.</li>
+  <li><a href="tu_chapter07.html">Chapter 07: Datasets Merge</a></li>
+  <li><a href="tu_chapter08.html">Chapter 08: Statistical Analysis</a></li>
 </ul>
-
-<h3 id="dataset-operation">Dataset operation</h3>
-<ul>
-  <li>To view dataset(s), you can either double-click the dataset(s) in the datasets listbox, click the View datasets button, or select a custom viewer interface in the View menu.</li>
-  <li>To apply a function to a given dataset, simply select one or more dataset(s) from that listbox, and choose the function using the dropdown title menus.</li>
-  <li>If you wish to modify manually a dataset using your own Matlab code, you can send the dataset to the Matlab workspace by right click the dataset and select “send to workspace”. This will create a new variable in the Matlab workspace, named <code class="highlighter-rouge">lwdata</code>. The workspace variable can be imported back into Letswave using the “Read from workspace”. This will replace the content of the selected dataset with the data contained in the <code class="highlighter-rouge">lwdata</code> workspace variable.</li>
-</ul>
-
-<p><img align="middle" src="images/data_structure.png" alt="refresh" style="width: 200px;" /></p>
 
 
     <div class="tags">
@@ -465,7 +448,7 @@ $('#toc').on('click', 'a', function() {
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
-				 Site last generated: Aug 31, 2018<br/>
+				 Site last generated: Sep 3, 2018<br/>
 				</span>
                 </div>
         </div>

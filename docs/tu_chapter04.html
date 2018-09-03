@@ -348,9 +348,24 @@
             
             
             
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Multiple Subjects Analysis</a>
+        <ul>
             
             
-            <li><a href="tu_chapter06.html">06. Result Observation</a></li>
+            
+            <li><a href="tu_chapter06.html">06. Datasets Merge</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_chapter07.html">07. Statistical Analysis</a></li>
             
             
             
@@ -441,11 +456,17 @@ $('#toc').on('click', 'a', function() {
 <p>Select the datasets “<strong><em>reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the menu. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> in the bottom of batch module to finish the work of artifact rejection. Two new datasets with the name “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
 <img src="images/tu_chapter04/Fig035.png" alt="Baseline Correction" /></p>
 
-<h2 id="averaging">Averaging</h2>
+<h2 id="step-11-averaging">Step 11: Averaging</h2>
 <p>After the ten steps of preprocessing, we can simply average the epoches to do time domain analysis. Select the datasets “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Average-&gt;Compute averag, std, median across epoches</strong> in the menu. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> in the bottom of batch module for averaging. Two new datasets with the name “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
 <img src="images/tu_chapter04/Fig038.png" alt="Averaging" /></p>
 
-<p>After the time domain analysis, we can have an observation of the result in <a href="tu_chapter06.html">chapter 06</a>. In this part, we demonstrated the preprocessing and time domain analysis step by step. For each step, there would be a prefix, such as butt, ica, and reref, added in the file names. Hence from the name of the dataset, we have a gereral understanding of the processing steps. More advanced tutorial for batch precessing and script.</p>
+<h2 id="view-the-result">View the Result</h2>
+<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Click the <strong>view</strong> in the right-click menu, we can see the time domain result in the multiviewer for the waveform.</p>
+
+<p>Select both the two datasets and select channel <strong>Pz</strong>, we can see the result of P300 on Pz. Open the topography in the toolbar and set the cursor to <strong>0.35</strong>, we can observe the topography of P300. Since it is the reuslt from single subject, the ERP is still noisy.<br />
+<img src="images/tu_chapter04/Fig050.png" alt="Time Domain Result" /></p>
+
+<p>In this part, we demonstrated the preprocessing and time domain analysis step by step. For each step, there would be a prefix, such as butt, ica, and reref, added in the file names. Hence from the name of the dataset, we have a gereral understanding of the processing steps. More advanced tutorial for batch precessing and script.</p>
 
 
 
@@ -466,7 +487,7 @@ $('#toc').on('click', 'a', function() {
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
-				 Site last generated: Aug 31, 2018<br/>
+				 Site last generated: Sep 3, 2018<br/>
 				</span>
                 </div>
         </div>

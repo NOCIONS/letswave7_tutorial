@@ -559,7 +559,7 @@
 "title": "Scroll layout",
 "tags": "special_layouts",
 "keywords": "json, scrolling, scrollto, jquery plugin",
-"url": "jsmydoc_scroll.html",
+"url": "mydoc_scroll.html",
 "summary": "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
 }
 ,
@@ -570,7 +570,7 @@
 "title": "Scroll layout",
 "tags": "special_layouts",
 "keywords": "json, scrolling, scrollto, jquery plugin",
-"url": "mydoc_scroll.html",
+"url": "jsmydoc_scroll.html",
 "summary": "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
 }
 ,
@@ -1158,10 +1158,32 @@
 
 
 {
-"title": "Chapter 06. Result Observation",
+"title": "Chapter 06. Datasets Merge",
 "tags": "",
 "keywords": "",
 "url": "tu_chapter06.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 07. Statistical Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_chapter07.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 08. Statistical Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_chapter08.html",
 "summary": ""
 }
 ,
@@ -1180,10 +1202,10 @@
 
 
 {
-"title": "1. Single Subject Analysis",
+"title": "2. Multiple Subject Analysis",
 "tags": "",
 "keywords": "",
-"url": "tu_signal_subject.html",
+"url": "tu_multiple_subject.html",
 "summary": ""
 }
 ,
@@ -1191,10 +1213,10 @@
 
 
 {
-"title": "Single Subject Analysis",
+"title": "1. Single Subject Analysis",
 "tags": "",
 "keywords": "",
-"url": "tu_signal_subject1.html",
+"url": "tu_signal_subject.html",
 "summary": ""
 }
 ,
