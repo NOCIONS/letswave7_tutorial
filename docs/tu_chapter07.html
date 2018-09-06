@@ -272,100 +272,98 @@
             
             
             
-            <li><a href="tu_getting_started.html">0. Getting Started</a></li>
+            <li><a href="tu_getting_started.html"><b>0. Getting Started</b></a></li>
             
             
             
             
             
             
-            <li><a href="tu_signal_subject.html">1. Signal Subject</a></li>
+            <li><a href="tu_signal_subject.html"><b>1. Signal Subject</b></a></li>
             
             
             
             
             
             
-            <li><a href="tu_multiple_subject.html">2. Multiple Subject</a></li>
+            <li><a href="tu_chapter01.html">Ch01 Data Import</a></li>
             
             
             
             
             
             
-            <li><a href="tu_multiple_subject.html">3. Figure Genertaion</a></li>
+            <li><a href="tu_chapter02.html">Ch02 Preprocessing</a></li>
             
             
             
             
             
             
-            <li><a href="tu_multiple_subject.html">4. Script Writing</a></li>
+            <li><a href="tu_chapter03.html">Ch03 ICA Decomposing</a></li>
             
             
             
             
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Single Subject Analysis</a>
-        <ul>
             
             
+            <li><a href="tu_chapter04.html">Ch04 Time Domain Analysis</a></li>
             
-            <li><a href="tu_chapter01.html">01. Data Import</a></li>
             
             
             
             
             
+            <li><a href="tu_chapter05.html">Ch05 Time-Frequency Analysis</a></li>
             
-            <li><a href="tu_chapter02.html">02. Preprocessing</a></li>
             
             
             
             
             
+            <li><a href="tu_multiple_subject.html"><b>2. Multiple Subject</b></a></li>
             
-            <li><a href="tu_chapter03.html">03. ICA Decomposing</a></li>
             
             
             
             
             
+            <li><a href="tu_chapter06.html">Ch06 Datasets Merge</a></li>
             
-            <li><a href="tu_chapter04.html">04. Time Domain Analysis</a></li>
             
             
             
             
             
+            <li class="active"><a href="tu_chapter07.html">Ch07 Statistical Analysis</a></li>
             
-            <li><a href="tu_chapter05.html">05. Time-Frequency Analysis</a></li>
             
             
             
             
-        </ul>
-        
-        
-    
-    <li>
-        <a href="#">Multiple Subjects Analysis</a>
-        <ul>
             
+            <li><a href="tu_figure_genertaion.html"><b>3. Figure Genertaion</b></a></li>
             
             
-            <li><a href="tu_chapter06.html">06. Datasets Merge</a></li>
             
             
             
             
+            <li><a href="tu_chapter08.html">Ch08 Single Subject Result</a></li>
             
             
-            <li class="active"><a href="tu_chapter07.html">07. Statistical Analysis</a></li>
+            
+            
+            
+            
+            <li><a href="tu_chapter09.html">Ch09 Multiple Subjects Result</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="tu_multiple_subject.html"><b>4. Batch Processing and Script</b></a></li>
             
             
             
@@ -431,6 +429,7 @@ $('#toc').on('click', 'a', function() {
 <p>Data-driven approach provides a more objective approach for the EEG analysis, by comparing the ERPs at an exhaustive of time, frequency and spatial points. Such a point-wise comparison would make a more comprehensive understanding of the data. Hence, the data-driven approach can effectively avoid the bias caused by the subjec-tive experience, which also improves the repeatable of the data analysis. Further, the point-wise analysis can tell you exactly where and when an effect occurs. As computers become faster and cheaper, data-driven approach is becoming more widely used. However, With the drastically increase of the number of hypothesis testing in the data-driven approach, we have to face the Family-Wise Error Rate (FWER) in the multiple comparison problem.</p>
 
 <h3 id="1-bonferroni-correction">1. Bonferroni Correction</h3>
+<p>Bonferroni method can be used for the FWER correction.  is famous for its simplicity. By decreasing the significant level α to α/m for m indenpendent test, Bonferroni correction strictly controls the global false positive rate to α. However, EEG data are highly correlated with their neighbors in the time, frequency, or spatial domain, which violates the independent assumption in Bonferroni correction. This correction comes at the cost of greatly increasing the probability of producing false negatives, and consequently reducing statistical power.</p>
 
 <h3 id="2-cluster-based-permutation-test">2. Cluster Based Permutation Test</h3>
 <p>Cluster-based permutation test, <a href="http://www.ncbi.nlm.nih.gov/pubmed/17517438">proposed by Maris</a>, uses the cluster-level statistic t_max instead of the point level statistic t_max, so that it can drastically increase the sensitivity of the statistical test while strictly controls the FWER. As a weak FWER control method, cluster-based permutation test provides a higher sensitivity than false discovery rate methods.</p>
@@ -469,7 +468,7 @@ $('#toc').on('click', 'a', function() {
 <br />
 <img src="images/tu_chapter07/Fig094.png" alt="Hypothesis-driven Test1" /></p>
 
-<p>To watch the reuslt on Pz channel by clicking the <strong>view</strong> in the right-click menu, we set the channel as <strong>Pz</strong>, keep the index as <strong>p-value</strong>. Since we set the significant level alpha = 0.05, we can set the Y-axis as <strong>0</strong> to <strong>0.05</strong> to watch the interval with the p-value lower than 0.05. It could be find except the main cluster around 0.2-0.7 seconds, there are still several clusters in the other time intervals, even before the stimulus. Hence, it is observiouly that there is the family-wise error rate is high. The Bonferroni Correction would be conservative. Since  there are 750 time points and 63 channels in the test, the corrected alpha value by Bonferroni method is <strong>0.05/750/63 = 10^-6</strong>.
+<p>To watch the reuslt on Pz channel by clicking the <strong>view</strong> in the right-click menu, we set the channel as <strong>Pz</strong>, keep the index as <strong>p-value</strong>. Since we set the significant level α = 0.05, we can set the Y-axis as <strong>0</strong> to <strong>0.05</strong> to watch the interval with the p-value lower than 0.05. It could be find except the main cluster around 0.2-0.7 seconds, there are still several clusters in the other time intervals, even before the stimulus. Hence, it is observiouly that there is the family-wise error rate is high. The Bonferroni Correction would be conservative. Since  there are 750 time points and 63 channels in the test, the corrected α value by Bonferroni method is <strong>0.05/750/63 = 10^-6</strong>.
 <br />
 <img src="images/tu_chapter07/Fig104.png" alt="Hypothesis-driven Test1" /></p>
 
@@ -494,11 +493,13 @@ $('#toc').on('click', 'a', function() {
 <p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold is considered as neighbours. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
 <br />
 <img src="images/tu_chapter07/Fig102.png" alt="Single-sensor analysis" />
-<img src="images/tu_chapter07/Fig97.png" alt="Single-sensor analysis" /></p>
+<img src="images/tu_chapter07/Fig097.png" alt="Single-sensor analysis" /></p>
 
 <p>With the same way in the single-sensor analysis to watch the result. It can be found that more time interval on channel Pz is reserved. It is because in the  time-spatial joint domain, they are considered as the same cluster.
 <br />
 <img src="images/tu_chapter07/Fig107.png" alt="Single-sensor analysis" /></p>
+
+<p>Up to now, we have shown a whole process from data importing, single subject analysis, multiple subject analysis to the statistical analysis. In the following, we will demonstrate the figure generation for the publication or presentation.</p>
 
 
 
@@ -519,7 +520,7 @@ $('#toc').on('click', 'a', function() {
                
                <span style="display:inline-block;" >
                	&copy;2018 Lestwave.cn. All rights reserved.<br />
-				 Site last generated: Sep 3, 2018<br/>
+				 Site last generated: Sep 4, 2018<br/>
 				</span>
                 </div>
         </div>
