@@ -405,7 +405,20 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  
+  <h3 id="script-for-data-import">Script for Data Import</h3>
+<h3 id="script-for-processing">Script for Processing</h3>
+<h3 id="script-for-figure">Script for Figure</h3>
+
+<h3 id="step-4-time-frequency-analysis">Step 4. Time-Frequency Analysis</h3>
+<h4 id="1-loading-the-dataset">1. Loading the Dataset</h4>
+<p>Click the tab <strong>average_epoch</strong> and select <strong>File-&gt;load</strong> in the batch module. Click the tab <strong>load</strong> on the left and click <strong>add</strong> and add dataset “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”.</p>
+
+<h4 id="2-cwt-and-averaging">2. CWT and Averaging</h4>
+<p>Click the tab <strong>load</strong> and select <strong>Plugins-&gt;my_tfa-&gt;Averaged CWT</strong> in the batch module and keep the dafault parameter setting for CWT.</p>
+
+<h4 id="3-baseline-correction">3. Baseline Correction</h4>
+<p>Click the tab <strong>avg_CWT</strong> and select <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the batch module and set the <strong>-0.75</strong> to <strong>-0.25</strong> seconds as the baseline.</p>
+
 
 
     <div class="tags">
