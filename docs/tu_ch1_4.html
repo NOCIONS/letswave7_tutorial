@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave7 can be downloaded as an archive from the NOCIONS Github repository.">
-<meta name="keywords" content="downloadinstallation,  download, installation">
-<title>Download and Installation | Letswave.cn</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 1-4. Time Domain Analysis | Letswave.cn</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Download and Installation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 1-4. Time Domain Analysis page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Download and Installation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 1-4. Time Domain Analysis">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -203,7 +203,7 @@
           
           
           
-          <li class="active"><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
           
           
           
@@ -261,7 +261,7 @@
           
           
           
-          <li><a href="tu_ch1_4.html">1.4. Time Domain Analysis</a></li>
+          <li class="active"><a href="tu_ch1_4.html">1.4. Time Domain Analysis</a></li>
           
           
           
@@ -365,15 +365,13 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Download and Installation</h1>
+   <h1 class="post-title-main">Chapter 1-4. Time Domain Analysis</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave7 can be downloaded as an archive from the <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">NOCIONS Github repository</a>.</div>
    
 
     
@@ -407,38 +405,54 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="download">Download</h2>
+  <p>In this chapter, we keep on the preprocessing on the P300 dataset after ICA filtering.</p>
 
-<p>You can download the package directly of Letswave7 from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> . Or you can visit the <a href="https://github.com/NOCIONS/letswave7">NOCIONS Github repository</a> and download the zip file.
-<img src="images/1_getting_started/download.png" alt="download" /></p>
+<h2 id="step-7-segmentationepoching">Step 7. Segmentation/Epoching</h2>
+<p>Select the dataset “<strong><em>sp_filter ica chan_interp butt sel_chan sub093</em></strong>”” in the data list of the manager module, and click <strong>Process-&gt;Epoch segmentation-&gt;Segment relative to events (one file per event code)</strong> in the menu. In the batch module, select Event codes <strong><em>S  9</em></strong> and <strong><em>S 10</em></strong>, and set the epcoh starting time and duration as <strong><em>-1</em></strong> and <strong><em>3</em></strong>. Click the button <strong>Run</strong> in the bottom of batch module, and then two new datasets with the name “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module. <br />
+<img src="images/tu_ch1_4/Fig029.png" alt="Channel location assignment" /></p>
 
-<h2 id="installation">Installation</h2>
-<ol>
-  <li>Unzip the zip archive of letswave7 in the folder of your choice.</li>
-  <li>Launch Matlab</li>
-  <li>In the Matlab menu ribbon, click on “<strong>Set Path</strong>”.
-<img src="images/1_getting_started/setpath.png" alt="Set Path" /></li>
-  <li>In the Set Path window, click button “<strong>Add Folder</strong>”.</li>
-  <li>Select the location of the Letswave7 folder</li>
-  <li>Save the modified path and close.
-<img src="images/1_getting_started/addpath.png" alt="Add Path" /></li>
-</ol>
+<p>In the menu, there are two items for segmentation, which are <strong>Segment relative to events</strong> and <strong>Segment relative to events (one file per event code)</strong>. They have similar function, but the output would be different. If multiple event codes has been selected, <strong>Segment relative to events</strong>  will segment all the epochs with different event codes into one dataset. However, with <strong>Segment relative to events (one file per event code)</strong>, separated dataset will be generated according to different event codes. For example, in this case of P300 dataset, the target and nontarget events are marked as <strong><em>S  9</em></strong> and <strong><em>S 10</em></strong>. Hence with <strong>Segment relative to events (one file per event code)</strong>, two dataset has been generated.</p>
 
-<p>To check whether the install is successful or not, input “letswave7” in the commond windows of Matlab. The pop-up of manager module, the main interface, indicates that the installation is successful.
-<img src="images/1_getting_started/manager_module.png" alt="Manager Module" /></p>
+<h2 id="step-8-artifact-rejection">Step 8. Artifact Rejection</h2>
+<p>Before the artifact rejection, it is necessary to have an observation to all the epochs. Select the datasets “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and select <strong>view</strong> in the right-click menu. In the multiviewer of the waveform, setting epochs as the superimposed waves, and select all epochs.  We select channel <strong><em>Pz</em></strong> for observation since it is the most interesting channel in the P300 analysis. Of cource, we should also have a look at the conditions on the other channels. By setting the y-axis from <strong><em>-100</em></strong> to <strong><em>100</em></strong>, all epochs seem fine on channel Pz. No obviously artifact has been observed for both the two datasets.<br />
+<img src="images/tu_ch1_4/Fig030a.png" alt="Artifact Rejection1" />
+<img src="images/tu_ch1_4/Fig030b.png" alt="Artifact Rejection2" /></p>
 
-<p><strong>Note:</strong> Letswave7 could <strong>NOT</strong> be used simutanously with eeglab, fieldtrip and the old version of Letswave. Once you used the letswave7, the path of eeglab, fieldtrip and etc. will be temporarily removed. If you want to use these toolboxs again, please restart the matlab or open a new matlab. Letswav6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<p>Hence, it is not necessary to perform arfifact rejection on this dataset. We will omit this step in the preprocessing of this P300 dataset. Considering the integrity of this manuel, we still show the operation of artifact rejection. In Letswave7, we provide two methods for artifact rejection.</p>
+
+<p>Fisrtly, we can manually reject the epochs with artifact. For this methods, select the datasets “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Edit-&gt;Arrange signals-&gt;Rearrange or delete epochs, channels, indexes</strong> in the menu. In the batch module, set the selection items as “<strong>Epoch</strong>”, and put the epochs you want to keep into the right column. Click the button <strong>Run</strong> in the bottom of batch module to finish the work of artifact rejection. Two new datasets with the name “<strong><em>sel_epoch ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>sel_epoch ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_ch1_4/Fig030e.png" alt="Artifact Rejection3" /></p>
+
+<p>The second method is using some criteria for the artifact rejection, like the value of the EEG signal in certain interval on certain channel exceeding a certain threshold for example. For this methods, select the datasets “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Artefact rejection and suppression-&gt;Reject epochs (amplitude criterion)</strong> in the menu. In the batch module, select the checkbox <strong>Select channels</strong> and select channel <strong>Pz</strong>. If the checkbox is not selected the crition will work on all the channels. On the right select the checkbox <strong>X-axis limits</strong> and set the corresponding interval as <strong>0</strong> to <strong>2</strong> seconds. If the checkbox is not selected, the crition will work on all the range of the x-axis. Since there is data on Y-axis and Z-axis is singleton, we do not need to check these two axises. Click the button <strong>Run</strong> in the bottom of batch module to finish the work of artifact rejection. Two new datasets with the name “<strong><em>ar-amp ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ar-amp ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module. In fact, there is not epochs has been rejected, the two new datasets are exactly the same as the previous.<br />
+<img src="images/tu_ch1_4/Fig030d.png" alt="Artifact Rejection4" /></p>
+
+<h2 id="step-9-rereference">Step 9. Rereference</h2>
+<p>In the study of P300, the average of bilateral mastoids regions normally is selected as reference. Hence, we will rereference to the mean value of TP9 and TP10. Select the datasets “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Rereference signals-&gt;Rereference</strong> in the menu. In the batch module, select the <strong>TP9</strong> and <strong>TP10</strong> as the <strong>new reference</strong> in the left list box and select all channels in the right list box for <strong>apply reference to</strong>. Click the button <strong>Run</strong> in the bottom of batch module to finish the work of artifact rejection. Two new datasets with the name “<strong><em>reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_ch1_4/Fig032.png" alt="Rereference" /></p>
+
+<p>Here, we select TP9 and TP10 for using the mean value of the two channels as the new reference. For the common average reference, we can select all channels in the left list box, then the average of all channels will be used as the new reference.</p>
+
+<h2 id="step-10-baseline-correction">Step 10. Baseline Correction</h2>
+<p>In the segmentation, we set the epcoh starting time and duration as <strong><em>-1</em></strong> and <strong><em>3</em></strong>, which means the epochs will start from <strong>-1s</strong> to <strong>2s</strong>. Hence, we set the baseline from <strong>-1s</strong> to <strong>0s</strong> for baseline correction.</p>
+
+<p>Select the datasets “<strong><em>reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the menu. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> in the bottom of batch module to finish the work of artifact rejection. Two new datasets with the name “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_ch1_4/Fig035.png" alt="Baseline Correction" /></p>
+
+<h2 id="step-11-averaging">Step 11: Averaging</h2>
+<p>After the ten steps of preprocessing, we can simply average the epochs to do time domain analysis. Select the datasets “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, and click <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong> in the menu. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> in the bottom of batch module for averaging. Two new datasets with the name “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<img src="images/tu_ch1_4/Fig038.png" alt="Averaging" /></p>
+
+<h2 id="view-the-result">View the Result</h2>
+<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Click the <strong>view</strong> in the right-click menu, we can see the time domain result in the multiviewer for the waveform.</p>
+
+<p>Select both the two datasets and select channel <strong>Pz</strong>, we can see the result of P300 on Pz. Open the topography in the toolbar and set the cursor to <strong>0.35</strong>, we can observe the topography of P300. Since it is the reuslt from single subject, the ERP is still noisy.<br />
+<img src="images/tu_ch1_4/Fig050.png" alt="Time Domain Result" /></p>
+
+<p>In this part, we demonstrated the preprocessing and time domain analysis step by step. For each step, there would be a prefix, such as butt, ica, and reref, added in the file names. Hence from the name of the dataset, we have a gereral understanding of the processing steps. More advanced tutorial for batch precessing and script.</p>
+
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        
-        
-        
         
     </div>
 

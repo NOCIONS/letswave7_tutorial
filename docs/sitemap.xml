@@ -90,85 +90,103 @@
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter01.html</loc>
+    <loc>http://localhost:4000/tu_ch0_getting_started.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter02.html</loc>
+    <loc>http://localhost:4000/tu_ch1_1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter03.html</loc>
+    <loc>http://localhost:4000/tu_ch1_2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter04.html</loc>
+    <loc>http://localhost:4000/tu_ch1_3.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter05.html</loc>
+    <loc>http://localhost:4000/tu_ch1_4.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter06.html</loc>
+    <loc>http://localhost:4000/tu_ch1_5.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter07.html</loc>
+    <loc>http://localhost:4000/tu_ch1_signal_subject.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter08.html</loc>
+    <loc>http://localhost:4000/tu_ch2_1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_chapter09.html</loc>
+    <loc>http://localhost:4000/tu_ch2_2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_figure_genertaion.html</loc>
+    <loc>http://localhost:4000/tu_ch2_multiple_subject.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_getting_started.html</loc>
+    <loc>http://localhost:4000/tu_ch3_1.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_multiple_subject.html</loc>
+    <loc>http://localhost:4000/tu_ch3_2.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/tu_signal_subject.html</loc>
+    <loc>http://localhost:4000/tu_ch3_figure_genertaion.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/assets/css/style.css</loc>
+    <loc>http://localhost:4000/tu_ch4_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_3.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_batch_script.html</loc>
   </url>
   
   

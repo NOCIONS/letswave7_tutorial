@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 2-2. Statistical Analysis | Letswave.cn</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Letswave7</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                
+                
+                <li><a href="https://github.com/NOCIONS/letswave7" target="_blank">Download</a></li>
+                
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 2-2. Statistical Analysis page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 2-2. Statistical Analysis">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle"> </li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">1. Welcome to Letswave</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="gs_general_info.html">2. General Information</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="gs_framework.html">4. Letswave Framework</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Letswave Tutorial</a>
+      <ul>
+          
+          
+          
+          <li><a href="tu_ch0_getting_started.html"><b>0. Getting Started</b></a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_signal_subject.html"><b>1. Signal Subject</b></a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_1.html">1.1. Data Import</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_2.html">1.2. Preprocessing</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_3.html">1.3. ICA Decomposing</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_4.html">1.4. Time Domain Analysis</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch1_5.html">1.5. Time-Frequency Analysis</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch2_multiple_subject.html"><b>2. Multiple Subject</b></a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch2_1.html">2.1. Grand Average</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="tu_ch2_2.html">2.2. Statistical Analysis</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch3_figure_genertaion.html"><b>3. Figure Genertaion</b></a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch3_1.html">3.1. Single Subject Result</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch3_2.html">3.2. Multiple Subjects Result</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch4_batch_script.html"><b>4. Batch Processing and Script</b></a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch4_1.html">4.1. Assign Batch Processing</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch4_2.html">4.2. Run Batch Processing</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="tu_ch4_3.html">4.3. Script Generation</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Chapter 2-2. Statistical Analysis</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+
+    
+
+  <h2 id="hypothesis-driven-vs-data-driven">Hypothesis-driven vs. Data-driven</h2>
+<p>Normally there are two ways to make statistical inferences, which are hypothesis-driven and data-driven approaches respectively.</p>
+
+<p>With the hypothesis-driven approach used in the analysis of P300, we empirically propose a hypothesis based on our observation of the data or the previous experience, such as the hypothesis that the maximum or mean of ERP from the predefined interval 0.2 to 0.7s would be different between target and nontarget conditions. With the hypothesis, a limited number of t-test or ANOVA would be conducted to test the proposed hypothesis. Hypothesis driven approach can is an effective way to explore neuropsychological mechanisms based on the EEG analysis. However, in the hypothesis-driven approach, the result highly depends on researchers?? subjective experience. Firstly, the interval selection from 0.2 to 0.7s is based on the subjective experience, in which the result would be sensitive to the parameter selection. Secondly, if the interval selection is based on the data observation, then it is easy to leads to make a false positive error since the difference may be caused by random effect. Thirdly, for more complex data, researcher??s observation usually is not sufficient, which means some interesting result would be missing, since the data outside the interval has not be analyzed.</p>
+
+<p>Data-driven approach provides a more objective approach for the EEG analysis, by comparing the ERPs at an exhaustive of time, frequency and spatial points. Such a point-wise comparison would make a more comprehensive understanding of the data. Hence, the data-driven approach can effectively avoid the bias caused by the subjec-tive experience, which also improves the repeatable of the data analysis. Further, the point-wise analysis can tell you exactly where and when an effect occurs. As computers become faster and cheaper, data-driven approach is becoming more widely used. However, With the drastically increase of the number of hypothesis testing in the data-driven approach, we have to face the Family-Wise Error Rate (FWER) in the multiple comparison problem.</p>
+
+<h3 id="1-bonferroni-correction">1. Bonferroni Correction</h3>
+<p>Bonferroni method can be used for the FWER correction.  is famous for its simplicity. By decreasing the significant level α to α/m for m indenpendent test, Bonferroni correction strictly controls the global false positive rate to α. However, EEG data are highly correlated with their neighbors in the time, frequency, or spatial domain, which violates the independent assumption in Bonferroni correction. This correction comes at the cost of greatly increasing the probability of producing false negatives, and consequently reducing statistical power.</p>
+
+<h3 id="2-cluster-based-permutation-test">2. Cluster Based Permutation Test</h3>
+<p>Cluster-based permutation test, <a href="http://www.ncbi.nlm.nih.gov/pubmed/17517438">proposed by Maris</a>, uses the cluster-level statistic t_max instead of the point level statistic t_max, so that it can drastically increase the sensitivity of the statistical test while strictly controls the FWER. As a weak FWER control method, cluster-based permutation test provides a higher sensitivity than false discovery rate methods.</p>
+
+<h2 id="hypothesis-driven-test">Hypothesis-driven Test</h2>
+<p>In this manuel, we show the statistical inferences with the hypothesis that,</p>
+
+<blockquote>
+  <p>The maximum or mean value of ERP from the predefined interval 0.2 to 0.7s at channel Pz would be different between target and nontarget conditions.</p>
+</blockquote>
+
+<p>Paired-sample t-test is performed on the 93 subjects. Hence, firstly we need to pick up the maximum and mean value from the interval 0.2 to 0.7s  at channel Pz for both  target and nontarget conditions.</p>
+
+<p>Select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select dataset <strong>merge_epoch Sub001 P300 target</strong>, and channel <strong>Pz</strong>, set the Superimposed waves as <strong>epochs</strong>, enable the <strong>interval selection</strong> in the toobar, and set the explore interval as <strong>0.2</strong> to <strong>0.7</strong> s. Press the button “Table”, we can a table for the statistic of the maximum and mean value, copy these data to the external software, such as Excel or SPSS, for the following statistical analysis. Certainly, Matlab can also do the same work. User can chose the software they prefer to do the statistical analysis. For sure, the results should be the same.
+<br />
+<img src="images/tu_ch2_2/Fig076.png" alt="Hypothesis-driven Test1" />
+<img src="images/tu_ch2_2/Fig084.png" alt="Hypothesis-driven Test1" />
+<img src="images/tu_ch2_2/Fig078.png" alt="Hypothesis-driven Test1" /></p>
+
+<p><br /></p>
+
+<p>Similarly, select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and press the button “Table”, pick up the same value on another dataset and copy it to the external softwave.
+<br />
+<img src="images/tu_ch2_2/Fig079.png" alt="Hypothesis-driven Test1" /></p>
+
+<p><br /></p>
+
+<p>Then we can do the statistical inferences. Take the software Excel for example. Previously, we copy the maximum and mean value in the condition of target to column A and B, copy the maximum and mean value in the condition of target to column C and D. In item <strong>E1</strong>, input “<strong>=T.TEST(A:A,C:C,2,1)</strong>” for the paired-sample t-test on the maximum value. The result, <strong>p = 6.8 * 10^-40</strong> indicates that for the maximum value of the EEG signal in the interval 0.2 to 0.7 s on channel Pz, there is a significant difference between the conditions of target and nontarget. Similarly, input “<strong>=T.TEST(A:A,C:C,2,1)</strong>” in item <strong>E2</strong> for the paired-sample t-test on the mean value. The result, <strong>p = 3.2 * 10^-28</strong> indicates that for the mean value of the EEG signal in the interval 0.2 to 0.7 s on channel Pz, there is a significant difference between the conditions of target and nontarget. 
+<br />
+<img src="images/tu_ch2_2/Fig091.png" alt="Hypothesis-driven Test1" /></p>
+
+<h2 id="data-driven-test">Data-driven Test</h2>
+
+<h3 id="1-point-wise-t-test">1. Point-wise T-Test</h3>
+<p>For the data-driven test, we need to do t-test for each time-channel point, which would lead to serious multiple comparison problem. For example, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to get the pointwise ttest result “<strong>ttest merge_epoch Sub001 P300 target</strong>” in the manager module. 
+<br />
+<img src="images/tu_ch2_2/Fig094.png" alt="Hypothesis-driven Test1" /></p>
+
+<p>To watch the reuslt on Pz channel by clicking the <strong>view</strong> in the right-click menu, we set the channel as <strong>Pz</strong>, keep the index as <strong>p-value</strong>. Since we set the significant level α = 0.05, we can set the Y-axis as <strong>0</strong> to <strong>0.05</strong> to watch the interval with the p-value lower than 0.05. It could be find except the main cluster around 0.2-0.7 seconds, there are still several clusters in the other time intervals, even before the stimulus. Hence, it is observiouly that there is the family-wise error rate is high. The Bonferroni Correction would be conservative. Since  there are 750 time points and 63 channels in the test, the corrected α value by Bonferroni method is <strong>0.05/750/63 = 10^-6</strong>.
+<br />
+<img src="images/tu_ch2_2/Fig104.png" alt="Hypothesis-driven Test1" /></p>
+
+<h3 id="2-cluster-based-permutation-test-1">2. Cluster-based Permutation Test</h3>
+<p>Hence, we need to do cluster-based permutation test for the multiple comparsion correction. Letswave7 provides two ways for the cluster-based permutation test, which are single-sensor analysis and multi-sensor analysis.</p>
+
+<h4 id="21-single-sensor-analysis">2.1 Single-sensor analysis</h4>
+<p>For the cluster-based permutation test, we can detect the cluster for each channel separately. With the same way in the point-wise t-test, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”.</p>
+
+<p>Enable the bottom panel for the <strong>Cluster-based Permutation Test</strong>. To get a more precise result, set the number of permutation as <strong>20000</strong>, which would make the computation time consuming. Click the button <strong>Run</strong>, and it need more than 10 minutes for the computation. The result would be kept in the dataset with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>”.
+<br />
+<img src="images/tu_ch2_2/Fig100.png" alt="Single-sensor analysis" />
+<img src="images/tu_ch2_2/Fig101.png" alt="Single-sensor analysis" /></p>
+
+<p>Open the dataset “<strong>ttest merge_epoch Sub001 P300 target</strong>” by clicking the <strong>view</strong> in the right-click menu. The uncorrected result is exactly the same as it is in the point-wise t-test. Set the index as “<strong>cluster p-value</strong>”, and set the cursor as <strong>0.332</strong>, which is the peak of the P300 component. It can be found that only the main cluster on channel Pz is reserved after cluster-based permutation test, the other clusters are excluded as false positive.
+<br />
+<img src="images/tu_ch2_2/Fig106.png" alt="Single-sensor analysis" /></p>
+
+<h4 id="22-multi-sensor-analysis">2.2 Multi-sensor analysis</h4>
+<p>On these datasets, we do the multi-sensor analysis by detecting the cluster in the time-spatial joint domain. Similarly, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Enable the bottom panel for the <strong>Cluster-based Permutation Test</strong> and set the number of permutation as <strong>20000</strong>.</p>
+
+<p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold is considered as neighbours. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
+<br />
+<img src="images/tu_ch2_2/Fig102.png" alt="Single-sensor analysis" />
+<img src="images/tu_ch2_2/Fig097.png" alt="Single-sensor analysis" /></p>
+
+<p>With the same way in the single-sensor analysis to watch the result. It can be found that more time interval on channel Pz is reserved. It is because in the  time-spatial joint domain, they are considered as the same cluster.
+<br />
+<img src="images/tu_ch2_2/Fig107.png" alt="Single-sensor analysis" /></p>
+
+<p>Up to now, we have shown a whole process from data importing, single subject analysis, multiple subject analysis to the statistical analysis. In the following, we will demonstrate the figure generation for the publication or presentation.</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2018 Letswave.cn. All rights reserved. <br />
+ Site last generated: Sep 9, 2018 <br />
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-20762787-5','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

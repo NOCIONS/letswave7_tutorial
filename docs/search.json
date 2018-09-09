@@ -113,120 +113,10 @@
 
 
 {
-"title": "Chapter 01. Data Import",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter01.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 02. Preprocessing",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter02.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 03. ICA Decomposing",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter03.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 04. Time Domain Analysis",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter04.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 05. Time-Frequency Analysis",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter05.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 06. Datasets Merge",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter06.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 07. Statistical Analysis",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter07.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 08. Single Subject Result",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter08.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "Chapter 09. Multiple Subjects Result",
-"tags": "",
-"keywords": "",
-"url": "tu_chapter09.html",
-"summary": ""
-}
-,
-
-
-
-{
-"title": "3. Figure Genertaion",
-"tags": "",
-"keywords": "",
-"url": "tu_figure_genertaion.html",
-"summary": ""
-}
-,
-
-
-
-{
 "title": "Lestwave Tutorial",
 "tags": "",
 "keywords": "",
-"url": "tu_getting_started.html",
+"url": "tu_ch0_getting_started.html",
 "summary": "In this tutorial, a P300 experiment will be studied to show the precess of data analysis on single subject and multiple subjects, and also the function figure generation and srcipt writing in Letswave is also introducted."
 }
 ,
@@ -234,10 +124,54 @@
 
 
 {
-"title": "2. Multiple Subject Analysis",
+"title": "Chapter 1-1. Data Import",
 "tags": "",
 "keywords": "",
-"url": "tu_multiple_subject.html",
+"url": "tu_ch1_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 1-2. Preprocessing",
+"tags": "",
+"keywords": "",
+"url": "tu_ch1_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 1-3. ICA Decomposing",
+"tags": "",
+"keywords": "",
+"url": "tu_ch1_3.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 1-4. Time Domain Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_ch1_4.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 1-5. Time-Frequency Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_ch1_5.html",
 "summary": ""
 }
 ,
@@ -248,7 +182,7 @@
 "title": "1. Single Subject Analysis",
 "tags": "",
 "keywords": "",
-"url": "tu_signal_subject.html",
+"url": "tu_ch1_signal_subject.html",
 "summary": ""
 }
 ,
@@ -256,10 +190,109 @@
 
 
 {
-"title": "",
+"title": "Chapter 2-1. Grand Average",
 "tags": "",
 "keywords": "",
-"url": "assetscssstyle.css",
+"url": "tu_ch2_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 2-2. Statistical Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_ch2_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "2. Multiple Subject Analysis",
+"tags": "",
+"keywords": "",
+"url": "tu_ch2_multiple_subject.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 3-1. Single Subject Result",
+"tags": "",
+"keywords": "",
+"url": "tu_ch3_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 3-2. Multiple Subjects Result",
+"tags": "",
+"keywords": "",
+"url": "tu_ch3_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "3. Figure Genertaion",
+"tags": "",
+"keywords": "",
+"url": "tu_ch3_figure_genertaion.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 4-1. Assign Batch Processing",
+"tags": "",
+"keywords": "",
+"url": "tu_ch4_1.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 4-2. Run Batch Processing",
+"tags": "",
+"keywords": "",
+"url": "tu_ch4_2.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Chapter 4-3. Script Generation",
+"tags": "",
+"keywords": "",
+"url": "tu_ch4_3.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "4. Batch Processing and Script",
+"tags": "",
+"keywords": "",
+"url": "tu_ch4_batch_script.html",
 "summary": ""
 }
 ,

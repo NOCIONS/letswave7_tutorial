@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave7 can be downloaded as an archive from the NOCIONS Github repository.">
-<meta name="keywords" content="downloadinstallation,  download, installation">
-<title>Download and Installation | Letswave.cn</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 3-2. Multiple Subjects Result | Letswave.cn</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Download and Installation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 3-2. Multiple Subjects Result page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Download and Installation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 3-2. Multiple Subjects Result">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -203,7 +203,7 @@
           
           
           
-          <li class="active"><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
           
           
           
@@ -310,7 +310,7 @@
           
           
           
-          <li><a href="tu_ch3_2.html">3.2. Multiple Subjects Result</a></li>
+          <li class="active"><a href="tu_ch3_2.html">3.2. Multiple Subjects Result</a></li>
           
           
           
@@ -365,15 +365,13 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Download and Installation</h1>
+   <h1 class="post-title-main">Chapter 3-2. Multiple Subjects Result</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave7 can be downloaded as an archive from the <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">NOCIONS Github repository</a>.</div>
    
 
     
@@ -407,38 +405,76 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="download">Download</h2>
+  <p>In this chapter, we will show the figure generation for the multiple subject analysis. <br />
+<img src="images/tu_ch3_2/new figure.png" alt="Multiple Subjects Result1" /></p>
 
-<p>You can download the package directly of Letswave7 from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> . Or you can visit the <a href="https://github.com/NOCIONS/letswave7">NOCIONS Github repository</a> and download the zip file.
-<img src="images/1_getting_started/download.png" alt="download" /></p>
+<h3 id="step1-open-the-figure-module">Step1. Open the Figure Module</h3>
+<p>In the folder of <strong>rawdata1</strong>, selected the datasets</p>
+<ul>
+  <li><strong><em>avg Sub001 P300 nontarget</em></strong></li>
+  <li><strong><em>avg Sub001 P300 target</em></strong></li>
+</ul>
 
-<h2 id="installation">Installation</h2>
-<ol>
-  <li>Unzip the zip archive of letswave7 in the folder of your choice.</li>
-  <li>Launch Matlab</li>
-  <li>In the Matlab menu ribbon, click on “<strong>Set Path</strong>”.
-<img src="images/1_getting_started/setpath.png" alt="Set Path" /></li>
-  <li>In the Set Path window, click button “<strong>Add Folder</strong>”.</li>
-  <li>Select the location of the Letswave7 folder</li>
-  <li>Save the modified path and close.
-<img src="images/1_getting_started/addpath.png" alt="Add Path" /></li>
-</ol>
+<p>Click “<strong>Figure-&gt;General Figure creator</strong>” to open the figure module with a blank canvas.<br /></p>
 
-<p>To check whether the install is successful or not, input “letswave7” in the commond windows of Matlab. The pop-up of manager module, the main interface, indicates that the installation is successful.
-<img src="images/1_getting_started/manager_module.png" alt="Manager Module" /></p>
+<h3 id="step2-create-the-subfigures">Step2. Create the Subfigures</h3>
+<ul>
+  <li>Set the width and height of the Figure as <strong>1000</strong> and <strong>400</strong>.</li>
+  <li>Add a <strong>curve</strong> with the title <strong>P300</strong>, font size <strong>12</strong>, and position <strong>x=80</strong>, <strong>y=70</strong>, <strong>w=870</strong> and <strong>h=300</strong>.</li>
+  <li>Add a <strong>topography</strong> with the title <strong>0 ms</strong>, font size <strong>12</strong>, and position <strong>x=100</strong>, <strong>y=180</strong>, <strong>w=120</strong> and <strong>h=120</strong>.</li>
+  <li>Add a <strong>topography</strong> with the title <strong>332 ms</strong>, font size <strong>12</strong>, and position <strong>x=230</strong>, <strong>y=180</strong>, <strong>w=120</strong> and <strong>h=120</strong>.</li>
+  <li>Add a <strong>topography</strong> with the title <strong>500 ms</strong>, font size <strong>12</strong>, enable the colorbar in the <strong>content</strong> panel and position <strong>x=100</strong>, <strong>y=180</strong>, <strong>w=120</strong> and <strong>h=120</strong>.</li>
+</ul>
 
-<p><strong>Note:</strong> Letswave7 could <strong>NOT</strong> be used simutanously with eeglab, fieldtrip and the old version of Letswave. Once you used the letswave7, the path of eeglab, fieldtrip and etc. will be temporarily removed. If you want to use these toolboxs again, please restart the matlab or open a new matlab. Letswav6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<p><img src="images/tu_ch3_2/Fig261.png" alt="Multiple Subjects Result2" />
+<img src="images/tu_ch3_2/Fig262.png" alt="Multiple Subjects Result3" />
+<img src="images/tu_ch3_2/Fig263.png" alt="Multiple Subjects Result4" />
+<img src="images/tu_ch3_2/Fig264.png" alt="Multiple Subjects Result5" />
+<img src="images/tu_ch3_2/Fig265.png" alt="Multiple Subjects Result6" /></p>
+
+<h3 id="step3-add-the-content">Step3. Add the Content</h3>
+<ul>
+  <li>Click the <strong>content</strong> button in the toolbar, select <strong>P300</strong> in the Subfigure. Add a <strong>curve</strong> with width as <strong>3</strong>,the data source as “<strong>avg merge_epoch Sub001 P300 target</strong>” and channel as <strong>Pz</strong>.</li>
+  <li>Add a <strong>curve</strong> with the color as blue <strong>[0,0.45,0.74]</strong>, width as <strong>3</strong>, Line style as <strong>dashed</strong>, data source as “<strong>Sub093 P300 nontarget</strong>” and channel as <strong>Pz</strong>.</li>
+  <li>Add a <strong>rect</strong> with face opacity <strong>0.25</strong>, edge opacity <strong>0</strong>, position <strong>x = 0.196</strong>, <strong>y= -2</strong>, <strong>w = 0.516</strong>, and <strong>h = 14</strong>. And sort the rect above the <strong>curve1</strong> and <strong>curve2</strong>.</li>
+  <li>Add a <strong>line</strong> with width as <strong>1</strong>, line style as <strong>dashed</strong>, and the position as <strong>x1=0</strong>, <strong>y1=-2</strong>, <strong>x2=0</strong> and <strong>y2=1.2</strong>.</li>
+  <li>Add a <strong>line</strong> with width as <strong>1</strong>, line style as <strong>dashed</strong>, and the position as <strong>x1=0.332</strong>, <strong>y1=-2</strong>, <strong>x2=0.332</strong> and <strong>y2=11.3</strong>.</li>
+  <li>Add a <strong>line</strong> with width as <strong>1</strong>, line style as <strong>dashed</strong>, and the position as <strong>x1=0.5</strong>, <strong>y1=-2</strong>, <strong>x2=0.5</strong> and <strong>y2=2.8</strong>.</li>
+  <li>Select <strong>0 ms</strong> in the Subfigure. Set the data source as “<strong>avg merge_epoch Sub001 P300 Target</strong>”, x from <strong>0</strong> to <strong>0</strong>, head radius as <strong>0.5</strong>, shrink as <strong>0.95</strong>, range from <strong>-2</strong> to <strong>12</strong> to keep it the same as the range of P300 curve. For the electrodes, set the szie as <strong>8</strong> and marker the channel <strong>Pz</strong>.</li>
+  <li>Select <strong>332 ms</strong> in the Subfigure. Set the data source as “<strong>avg merge_epoch Sub001 P300 Target</strong>”, x from <strong>0.332</strong> to <strong>0.332</strong>, head radius as <strong>0.5</strong>, shrink as <strong>0.95</strong>, range from <strong>-2</strong> to <strong>12</strong> to keep it the same as the range of P300 curve. For the electrodes, set the szie as <strong>8</strong> and marker the channel <strong>Pz</strong>.</li>
+  <li>Select <strong>500 ms</strong> in the Subfigure. Set the data source as “<strong>avg merge_epoch Sub001 P300 Target</strong>”, x from <strong>0.5</strong> to <strong>0.5</strong>, head radius as <strong>0.5</strong>, shrink as <strong>0.95</strong>, range from <strong>-2</strong> to <strong>12</strong> to keep it the same as the range of P300 curve. For the electrodes, set the szie as <strong>8</strong> and marker the channel <strong>Pz</strong>.</li>
+</ul>
+
+<p><img src="images/tu_ch3_2/Fig266.png" alt="Multiple Subjects Result7" />
+<img src="images/tu_ch3_2/Fig267.png" alt="Multiple Subjects Result8" />
+<img src="images/tu_ch3_2/Fig268.png" alt="Multiple Subjects Result9" />
+<img src="images/tu_ch3_2/Fig269.png" alt="Multiple Subjects Result10" />
+<img src="images/tu_ch3_2/Fig270.png" alt="Multiple Subjects Result11" />
+<img src="images/tu_ch3_2/Fig271.png" alt="Multiple Subjects Result12" />
+<img src="images/tu_ch3_2/Fig279.png" alt="Multiple Subjects Result13" />
+<img src="images/tu_ch3_2/Fig280.png" alt="Multiple Subjects Result14" />
+<img src="images/tu_ch3_2/Fig281.png" alt="Multiple Subjects Result15" />
+<br /></p>
+
+<p>After step 3, the figure will be like the following figure,<br />
+<img src="images/tu_ch3_2/Fig282.png" alt="Multiple Subjects Result16" /></p>
+
+<h3 id="step4-set-the-axis-parameters">Step4. Set the axis parameters</h3>
+<ul>
+  <li>Click the <strong>axis</strong> button in the toolbar, select <strong>P300</strong> in the Subfigure. and enable the <strong>Box</strong> and <strong>Legend</strong>.</li>
+  <li>Select <strong>curve1</strong> in the listbox of the content, change its name to <strong>Target</strong> in the legend. Select <strong>curve2</strong> in the listbox of the content, change its name to <strong>NonTarget</strong> in the legend.</li>
+  <li>For x axis, set the x-lim from <strong>-0.5</strong> to <strong>1.5</strong> second. Enable the <strong>grid</strong> and the <strong>label</strong>, set label as “<strong>Time [sec]</strong>”.</li>
+  <li>For y axis, enable the <strong>grid</strong> and the <strong>label</strong>, set the label as “<strong>Amp [\muV]</strong>“<br />
+<img src="images/tu_ch3_2/Fig283.png" alt="Multiple Subjects Result17" />
+<br /></li>
+</ul>
+
+<p>After step 4, the figure will be like the following figure. Here we did not export it to the external software for the further editing.<br />
+<img src="images/tu_ch3_2/Fig284.png" alt="Multiple Subjects Result18" /></p>
+
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        
-        
-        
         
     </div>
 

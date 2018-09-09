@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave7 can be downloaded as an archive from the NOCIONS Github repository.">
-<meta name="keywords" content="downloadinstallation,  download, installation">
-<title>Download and Installation | Letswave.cn</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 2-1. Grand Average | Letswave.cn</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Download and Installation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 2-1. Grand Average page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Download and Installation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 2-1. Grand Average">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -203,7 +203,7 @@
           
           
           
-          <li class="active"><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
           
           
           
@@ -282,7 +282,7 @@
           
           
           
-          <li><a href="tu_ch2_1.html">2.1. Grand Average</a></li>
+          <li class="active"><a href="tu_ch2_1.html">2.1. Grand Average</a></li>
           
           
           
@@ -365,15 +365,13 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Download and Installation</h1>
+   <h1 class="post-title-main">Chapter 2-1. Grand Average</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave7 can be downloaded as an archive from the <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">NOCIONS Github repository</a>.</div>
    
 
     
@@ -407,38 +405,53 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="download">Download</h2>
+  <h2 id="step-1-downsampling">Step 1: Downsampling</h2>
+<p>Considering the size of the example dataset for uploading and downloading, we downsample the datasets from 1000Hz to 250Hz.</p>
 
-<p>You can download the package directly of Letswave7 from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> . Or you can visit the <a href="https://github.com/NOCIONS/letswave7">NOCIONS Github repository</a> and download the zip file.
-<img src="images/1_getting_started/download.png" alt="download" /></p>
+<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and select “<strong>Edit-&gt;Resample Signals-&gt;Downsample signals (integer ratio)</strong>”. In the batch module, set the downsampling ratio to 4. Click the button <strong>Run</strong> for downsampling. Two new datasets with the name “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ds avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<br />
+<img src="images/tu_ch2_1/Fig061.png" alt="Dataset Rename" /></p>
 
-<h2 id="installation">Installation</h2>
-<ol>
-  <li>Unzip the zip archive of letswave7 in the folder of your choice.</li>
-  <li>Launch Matlab</li>
-  <li>In the Matlab menu ribbon, click on “<strong>Set Path</strong>”.
-<img src="images/1_getting_started/setpath.png" alt="Set Path" /></li>
-  <li>In the Set Path window, click button “<strong>Add Folder</strong>”.</li>
-  <li>Select the location of the Letswave7 folder</li>
-  <li>Save the modified path and close.
-<img src="images/1_getting_started/addpath.png" alt="Add Path" /></li>
-</ol>
+<h2 id="step-2-dataset-rename">Step 2: Dataset Rename</h2>
+<p>In the single subject analysis, we show the process of time domain analysis and time frequency analysis step by step. For each step, there would be new datasets generated with a prefix. In result, the final result of the time domain analysis would be “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ds avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”, which shows the basic information of the processing but would be too long for displaying. Hence, before the multiple subjects analysis, we need to rename the datasets.</p>
 
-<p>To check whether the install is successful or not, input “letswave7” in the commond windows of Matlab. The pop-up of manager module, the main interface, indicates that the installation is successful.
-<img src="images/1_getting_started/manager_module.png" alt="Manager Module" /></p>
+<p>Select the dataset “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and press the <strong>rename</strong> in the right-clicked menu. Rename the dataset “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” to “<strong><em>Sub093 P300 target</em></strong>”. With the similarly, rename the dataset “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” to “<strong><em>Sub093 P300 nontarget</em></strong>”.
+<br />
+<img src="images/tu_ch2_1/Fig062.png" alt="Dataset Rename" /></p>
 
-<p><strong>Note:</strong> Letswave7 could <strong>NOT</strong> be used simutanously with eeglab, fieldtrip and the old version of Letswave. Once you used the letswave7, the path of eeglab, fieldtrip and etc. will be temporarily removed. If you want to use these toolboxs again, please restart the matlab or open a new matlab. Letswav6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<h2 id="step-3-datasets-copy-and-merge">Step 3: Datasets Copy and Merge</h2>
+<p>For the multiple subjects analysis, we need to copy the time domain analysis results into to a new folder. For example, the datasets in the folder <strong>rawdata2</strong> is all the 93 subjects time domain analysis result, which can be downloaded <a href="https://github.com/NOCIONS/letswave7_tutorial/raw/master/rawdata2.zip">here (33M)</a>. Unzip the <strong><em>rawdata2.zip</em></strong> file, there are 93 datasets in 93*2 files.</p>
+
+<p>In the single subject analysis, the result is the average of all the trials for target and nontarget epochs. For multiple subjects analysis, we need fisrtly to merge the datasets from 93 subjects into one dataset, in which each subject in the new dataset is treated as a epoch. Select the tag “<strong>nontarget</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Select “<strong>Edit-&gt;Arrange signals-&gt;Merge dataset epochs, channels, indexes</strong>”. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to merge all the selected datasets in the condition of nontarget. 
+<br />
+<img src="images/tu_ch2_1/Fig065.png" alt="Datasets Merge1" />
+<img src="images/tu_ch2_1/Fig066.png" alt="Datasets Merge2" /></p>
+
+<p>In the same way, we can merge all the datasets in the condition of target, in which we should select the tag “<strong>target</strong>” in the <strong>include</strong> list box from the left part of the manager module.</p>
+
+<p>In result, the two new datasets, with 93 epochs for each, “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>”, which contain the time domain analysis results from 93 subjects in the conditions of “target” and “nontarget”.</p>
+
+<h2 id="step-4-grand-average">Step 4: Grand Average</h2>
+<p>Select the tag “<strong>merge_epoch</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Similar with the averaging operation in the single subject level, select <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong>. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to average all the epochs in the two datasets, which is actually run the grand average for all the subjects in the conditions of target and nontarget. Two new datasets with the name “<strong>avg merge_epoch Sub001 P300 nontarget</strong>” and “<strong>avg merge_epoch Sub001 P300 target</strong>” will be appeared in the data list of the manager module.
+<br />
+<img src="images/tu_ch2_1/Fig068.png" alt="Grand Average" /></p>
+
+<h2 id="step-5-view-the-result">Step 5: View the Result</h2>
+<p>To view the reuslt of grand average, select the two datasets “<strong>avg merge_epoch Sub001 P300 nontarget</strong>” and “<strong>avg merge_epoch Sub001 P300 target</strong>”, and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select channel <strong>Pz</strong>, to see the results with the same order as it is in the single subject level, we need to change the order of the datasets. Select the dataset “<strong>avg merge_epoch Sub001 P300 target</strong>” and click the button “<strong>dataset up</strong>”.
+<br />
+<img src="images/tu_ch2_1/Fig071.png" alt="Grand Average view1" /></p>
+
+<p>Select both the two datasets, and enable the <strong>interval selection</strong> button in the toolbar. Seclect the interval parameters for <strong>0.2</strong> to <strong>0.7</strong> seconds and click the “<strong>Table</strong>” button, the table for the statistic of maximum, minimum and mean value is poped up, in which we find the peak of the P300 component is 11.22 µV, happened at the 332 ms.<br />
+<img src="images/tu_ch2_1/Fig072.png" alt="Grand Average view2" />
+<img src="images/tu_ch2_1/Fig073.png" alt="Grand Average view3" /></p>
+
+<p>Enable the <strong>cursor</strong> and the <strong>2D topography</strong> in the toolbar, and set the location of the cursor to be <strong>0.332</strong>. The grand average topography of the P300 experiment can be seen in both the conditions of target and nontarget at the peak time point of the P300 component.<br />
+<img src="images/tu_ch2_1/Fig074.png" alt="Grand Average view4" />
+<img src="images/tu_ch2_1/Fig075.png" alt="Grand Average view5" /></p>
+
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        
-        
-        
         
     </div>
 

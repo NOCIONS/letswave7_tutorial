@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave7 can be downloaded as an archive from the NOCIONS Github repository.">
-<meta name="keywords" content="downloadinstallation,  download, installation">
-<title>Download and Installation | Letswave.cn</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 3-1. Single Subject Result | Letswave.cn</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Download and Installation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 3-1. Single Subject Result page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Download and Installation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 3-1. Single Subject Result">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -203,7 +203,7 @@
           
           
           
-          <li class="active"><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
           
           
           
@@ -303,7 +303,7 @@
           
           
           
-          <li><a href="tu_ch3_1.html">3.1. Single Subject Result</a></li>
+          <li class="active"><a href="tu_ch3_1.html">3.1. Single Subject Result</a></li>
           
           
           
@@ -365,15 +365,13 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Download and Installation</h1>
+   <h1 class="post-title-main">Chapter 3-1. Single Subject Result</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave7 can be downloaded as an archive from the <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">NOCIONS Github repository</a>.</div>
    
 
     
@@ -407,38 +405,108 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="download">Download</h2>
+  <p>In this chapter, we will show the process for the generation of the following figure. In this figure, we show the ERP of P300 on channel Pz with its topography on 332 ms. The corresponding time-frequency maps in the conditions of target and nontarget are illustrated in the bottom panel.<br />
+<img src="images/tu_ch3_1/Fig_1.jpg" alt="Single Subject Result1" /></p>
 
-<p>You can download the package directly of Letswave7 from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> . Or you can visit the <a href="https://github.com/NOCIONS/letswave7">NOCIONS Github repository</a> and download the zip file.
-<img src="images/1_getting_started/download.png" alt="download" /></p>
+<h3 id="step1-open-the-figure-module">Step1. Open the Figure Module</h3>
+<p>In the folder of <strong>rawdata1</strong>, selected the datasets</p>
+<ul>
+  <li><strong><em>Sub093 P300 nontarget</em></strong></li>
+  <li><strong><em>Sub093 P300 target</em></strong></li>
+  <li><strong><em>bl avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong></li>
+  <li><strong><em>bl avg cwt bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong></li>
+</ul>
 
-<h2 id="installation">Installation</h2>
-<ol>
-  <li>Unzip the zip archive of letswave7 in the folder of your choice.</li>
-  <li>Launch Matlab</li>
-  <li>In the Matlab menu ribbon, click on “<strong>Set Path</strong>”.
-<img src="images/1_getting_started/setpath.png" alt="Set Path" /></li>
-  <li>In the Set Path window, click button “<strong>Add Folder</strong>”.</li>
-  <li>Select the location of the Letswave7 folder</li>
-  <li>Save the modified path and close.
-<img src="images/1_getting_started/addpath.png" alt="Add Path" /></li>
-</ol>
+<p>Click “<strong>Figure-&gt;General Figure creator</strong>” to open the figure module with a blank canvas.<br />
+<img src="images/tu_ch3_1/Fig231.png" alt="Single Subject Result2" /></p>
 
-<p>To check whether the install is successful or not, input “letswave7” in the commond windows of Matlab. The pop-up of manager module, the main interface, indicates that the installation is successful.
-<img src="images/1_getting_started/manager_module.png" alt="Manager Module" /></p>
+<h3 id="step2-create-the-subfigures">Step2. Create the Subfigures</h3>
+<p>2.1 Add a <strong>curve</strong>, two <strong>images</strong> and one <strong>topography</strong> into the canvas.</p>
 
-<p><strong>Note:</strong> Letswave7 could <strong>NOT</strong> be used simutanously with eeglab, fieldtrip and the old version of Letswave. Once you used the letswave7, the path of eeglab, fieldtrip and etc. will be temporarily removed. If you want to use these toolboxs again, please restart the matlab or open a new matlab. Letswav6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<p>2.2 For the second image and the topography, enable the colorbar.</p>
+<ul>
+  <li>Click the <strong>content</strong> button in the toolbar, select <strong>image3</strong> in the Subfigure and enable the <strong>colorbar</strong>.</li>
+  <li>Select <strong>topograph4</strong> in the Subfigure and enable the  <strong>colorbar</strong>.</li>
+</ul>
+
+<p><img src="images/tu_ch3_1/Fig232.png" alt="Single Subject Result3" />
+<img src="images/tu_ch3_1/Fig235.png" alt="Single Subject Result4" />
+<img src="images/tu_ch3_1/Fig236.png" alt="Single Subject Result5" /></p>
+
+<p>2.3 Adjust the position for each subfigure</p>
+<ul>
+  <li>Click the <strong>figure</strong> button in the toolbar, select <strong>Curve1</strong>. Set the Title to “<strong>P300</strong>”, Font size as <strong>12</strong>, and the position as <strong>x=50</strong>, <strong>y=340</strong>, <strong>w=600</strong> and <strong>h=250</strong>.</li>
+  <li>Select <strong>Image2</strong>. Set the Title to “<strong>Target</strong>”, Font size as <strong>12</strong>, and the position as <strong>x=70</strong>, <strong>y=50</strong>, <strong>w=250</strong> and <strong>h=250</strong>.</li>
+  <li>Select <strong>Image3</strong>. Set the Title to “<strong>Nontarget</strong>”, Font size as <strong>12</strong>, and the position as <strong>x=360</strong>, <strong>y=50</strong>, <strong>w=250</strong> and <strong>h=250</strong>.</li>
+  <li>Select <strong>Topograph4</strong>. Set the Title to “<strong>332 ms</strong>”, Font size as <strong>12</strong>, and the position as <strong>x=480</strong>, <strong>y=470</strong>, <strong>w=120</strong> and <strong>h=120</strong>.</li>
+</ul>
+
+<p><img src="images/tu_ch3_1/Fig237.png" alt="Single Subject Result6" />
+<img src="images/tu_ch3_1/Fig238.png" alt="Single Subject Result7" />
+<img src="images/tu_ch3_1/Fig239.png" alt="Single Subject Result8" />
+<img src="images/tu_ch3_1/Fig240.png" alt="Single Subject Result9" /></p>
+
+<p><br /></p>
+
+<p>After step 2, the figure will be like the following figure,<br />
+<img src="images/tu_ch3_1/Fig241.png" alt="Single Subject Result9" /></p>
+
+<h3 id="step3-add-the-content">Step3. Add the Content</h3>
+<ul>
+  <li>Click the <strong>content</strong> button in the toolbar, select <strong>P300</strong> in the Subfigure. Add a <strong>curve</strong> with the data source as “<strong>Sub093 P300 target</strong>” and channel as <strong>Pz</strong>.</li>
+  <li>Add a <strong>curve</strong> with the color as blue <strong>[0,0.45,0.74]</strong>, data source as “<strong>Sub093 P300 nontarget</strong>” and channel as <strong>Pz</strong>.</li>
+  <li>Add a <strong>line</strong> with the position as <strong>x1=0.332</strong>, <strong>y1=-5</strong>, <strong>x2=0.332</strong> and <strong>y2=10.8619</strong>.</li>
+</ul>
+
+<p><img src="images/tu_ch3_1/Fig242.png" alt="Single Subject Result9" />
+<img src="images/tu_ch3_1/Fig243.png" alt="Single Subject Result10" />
+<img src="images/tu_ch3_1/Fig244.png" alt="Single Subject Result11" /></p>
+
+<ul>
+  <li>Select <strong>Target</strong> in the Subfigure. Set the data source as “<strong>bl avg cwt bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</strong>”, channel as <strong>Pz</strong>, range from <strong>-9</strong> to <strong>9</strong>, enable the <strong>contour</strong>, and set the width as <strong>0.5</strong>, start from <strong>0</strong> to <strong>0</strong>.</li>
+  <li>Select <strong>Nonarget</strong> in the Subfigure. Set the data source as “<strong>bl avg cwt bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</strong>”, channel as <strong>Pz</strong>, range from <strong>-9</strong> to <strong>9</strong>, enable the <strong>contour</strong>, and set the width as <strong>0.5</strong>, start from <strong>0</strong> to <strong>0</strong>.</li>
+  <li>Select <strong>332 ms</strong> in the Subfigure. Set the data source as “<strong>Sub093 P300 target</strong>”, x from <strong>0.332</strong> to <strong>0.332</strong>, head radius as <strong>0.5</strong>, shrink as <strong>0.95</strong>, range from <strong>-5</strong> to <strong>10.8619</strong> to keep it the same as the range of P300 curve. For the electrodes, set the szie as <strong>8</strong> and marker the channel <strong>Pz</strong>.</li>
+</ul>
+
+<p><img src="images/tu_ch3_1/Fig245.png" alt="Single Subject Result9" />
+<img src="images/tu_ch3_1/Fig246.png" alt="Single Subject Result10" />
+<img src="images/tu_ch3_1/Fig247.png" alt="Single Subject Result11" /></p>
+
+<p><br /></p>
+
+<p>After step 3, the figure will be like the following figure,<br />
+<img src="images/tu_ch3_1/Fig248.png" alt="Single Subject Result12" /></p>
+
+<h3 id="step4-set-the-axis-parameters">Step4. Set the axis parameters</h3>
+<ul>
+  <li>Click the <strong>axis</strong> button in the toolbar, select <strong>P300</strong> in the Subfigure. and enable the <strong>Legend</strong>. Select <strong>curve1</strong> in the listbox of the content, change its name to <strong>Target</strong> in the legend. Select <strong>curve2</strong> in the listbox of the content, change its name to <strong>NonTarget</strong> in the legend. For x axis, set the x-lim from <strong>-0.5</strong> to <strong>1.5</strong> second, change the location to <strong>origin</strong>, which is only support by the higher version Matlab. Enable the label, and set it as “<strong>Time [sec]</strong>”. For y axis, change the location to <strong>origin</strong>, which is only support by the higher version Matlab. Enable the label, and set it as “<strong>Amp [\muV]</strong>”</li>
+  <li>select <strong>Target</strong> in the Subfigure. For x axis, set the x-lim from <strong>-0.5</strong> to <strong>1.5</strong> second and set the label as “<strong>Time [sec]</strong>”. For y axis, set the label as “<strong>Freq [Hz]</strong>”.</li>
+  <li>select <strong>Nontarget</strong> in the Subfigure. For x axis, set the x-lim from <strong>-0.5</strong> to <strong>1.5</strong> second and set the label as “<strong>Time [sec]</strong>”. For y axis, set the label as “<strong>\muV^2/Hz</strong>”, which acturally is used for the lable of the colorbar in the following edit.</li>
+</ul>
+
+<p><img src="images/tu_ch3_1/Fig249.png" alt="Single Subject Result13" />
+<img src="images/tu_ch3_1/Fig250.png" alt="Single Subject Result14" />
+<img src="images/tu_ch3_1/Fig251.png" alt="Single Subject Result15" /></p>
+
+<p><br /></p>
+
+<p>After step 4, the figure will be like the following figure,<br />
+<img src="images/tu_ch3_1/Fig252.png" alt="Single Subject Result16" /></p>
+
+<h3 id="step5-export-the-figure">Step5. Export the Figure</h3>
+<p>Until now, we have finished the edit of the figure in Letswave. In the following, we need to export the figure, for a further edit in the other software. Click the button “<strong>export the figure</strong>” in the toolbox, save the figure as vector files, like <strong>eps</strong> or <strong>pdf</strong> format. Here, we use Illustrator to add a box outside the figure and adjust the position for the text.<br />
+<img src="images/tu_ch3_1/Fig224.png" alt="Single Subject Result17" />
+<img src="images/tu_ch3_1/Fig225.png" alt="Single Subject Result18" /></p>
+
+<p><br /></p>
+
+<p>Finally, we can get the Figure “<strong>Fig_1.jpg</strong>” as is shown above.
+<br />
+<img src="images/tu_ch3_1/Fig_1.jpg" alt="Single Subject Result19" /></p>
+
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        
-        
-        
         
     </div>
 

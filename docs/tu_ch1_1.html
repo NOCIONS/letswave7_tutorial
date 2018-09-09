@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Letswave7 can be downloaded as an archive from the NOCIONS Github repository.">
-<meta name="keywords" content="downloadinstallation,  download, installation">
-<title>Download and Installation | Letswave.cn</title>
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Chapter 1-1. Data Import | Letswave.cn</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -133,7 +133,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Download and Installation page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:huanggan1982@gmail.com?subject=Question for Letswave feedback&body=I have some feedback about the Chapter 1-1. Data Import page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -151,7 +151,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Download and Installation">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Chapter 1-1. Data Import">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -203,7 +203,7 @@
           
           
           
-          <li class="active"><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
+          <li><a href="gs_download_and_installation.html">3. Download and Installation</a></li>
           
           
           
@@ -240,7 +240,7 @@
           
           
           
-          <li><a href="tu_ch1_1.html">1.1. Data Import</a></li>
+          <li class="active"><a href="tu_ch1_1.html">1.1. Data Import</a></li>
           
           
           
@@ -365,15 +365,13 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Download and Installation</h1>
+   <h1 class="post-title-main">Chapter 1-1. Data Import</h1>
 </div>
 
 
 
 <div class="post-content">
 
-   
-    <div class="summary">Letswave7 can be downloaded as an archive from the <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">NOCIONS Github repository</a>.</div>
    
 
     
@@ -407,38 +405,53 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="download">Download</h2>
+  <h2 id="1-software-preparing">1. Software Preparing</h2>
+<p>Letswave7 is a toolbox for EEG signal processing based on <a href="https://en.wikipedia.org/wiki/MATLAB">Matlab</a> under the platform of Windows, Mac OSX, and Linux or Unix. Before the use of Letswave7, Matlab should be <a href="https://www.mathworks.com/downloads/">download</a> and <a href="https://www.mathworks.com/help/install/ug/install-mathworks-software.html">installed</a>. The use of Letswave7 depends on Matlab toolbox of <strong>Signal Processing Toolbox</strong>, <strong>Wavelet Toolbox</strong>, <strong>Statistics and Machine Learning Toolbox</strong>. Make sure these toolbox has been installed during the installation of Matlab.</p>
 
-<p>You can download the package directly of Letswave7 from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> . Or you can visit the <a href="https://github.com/NOCIONS/letswave7">NOCIONS Github repository</a> and download the zip file.
-<img src="images/1_getting_started/download.png" alt="download" /></p>
+<p>You can download the package of Letswave7 directly from <a href="https://github.com/NOCIONS/letswave7/archive/master.zip">Github</a> or the <a href="external/letswave7-master.zip">mirror site</a>. For Letswave installation, unzip the file you download into the folder of your choice. Add the folder into the the path of Matlab. Input “<strong><em>letswave7</em></strong>” in the commond windows of Matlab to check whether the install is successful or not. Click <a href="gs_download_and_installation.html">here</a> for more information about the download and setup.</p>
 
-<h2 id="installation">Installation</h2>
-<ol>
-  <li>Unzip the zip archive of letswave7 in the folder of your choice.</li>
-  <li>Launch Matlab</li>
-  <li>In the Matlab menu ribbon, click on “<strong>Set Path</strong>”.
-<img src="images/1_getting_started/setpath.png" alt="Set Path" /></li>
-  <li>In the Set Path window, click button “<strong>Add Folder</strong>”.</li>
-  <li>Select the location of the Letswave7 folder</li>
-  <li>Save the modified path and close.
-<img src="images/1_getting_started/addpath.png" alt="Add Path" /></li>
-</ol>
+<h2 id="2-dataset-preparing">2. Dataset Preparing</h2>
+<p>Firstly, download the <a href="https://github.com/NOCIONS/letswave7_tutorial/raw/master/rawdata1.zip">tutorial dataset (12M)</a>. Unzip the rawdata1.zip file, there are three file, which are <strong><em>sub093.eeg</em></strong>, <strong><em>sub093.vhdr</em></strong>, and <strong><em>sub093.vmrk</em></strong>.</p>
 
-<p>To check whether the install is successful or not, input “letswave7” in the commond windows of Matlab. The pop-up of manager module, the main interface, indicates that the installation is successful.
-<img src="images/1_getting_started/manager_module.png" alt="Manager Module" /></p>
+<p>It is a P300 experiment for one subject, recorded by BrainAmp (Brain Products GmbH, Germany) with 64 channels, 1000Hz sampling rate, and referenced to FCz. Visual oddball experiment with the red as the target stimuli (marked as <strong><em>“S  9”</em></strong>) and white as the nontarget stimuli (marked as <strong><em>“S 10”</em></strong>) on the screen. Each square lasts 80ms with the ISI 200ms. 600 trials of the stimuli in all is arranged in a two minutes session, in which target stimuli come with the possibility of 5%. The participant is asked to count the number of red square and report after the session to make the participant keep attention on the screen.</p>
 
-<p><strong>Note:</strong> Letswave7 could <strong>NOT</strong> be used simutanously with eeglab, fieldtrip and the old version of Letswave. Once you used the letswave7, the path of eeglab, fieldtrip and etc. will be temporarily removed. If you want to use these toolboxs again, please restart the matlab or open a new matlab. Letswav6 can be downloaded <a href="https://github.com/NOCIONS/letswave6/archive/master.zip">here</a>.</p>
+<h2 id="3-dataset-import">3. Dataset Import</h2>
+<p>Open Matlab, and input “<strong><em>letswave7</em></strong>” in the commond windows of Matlab to open Letswave7. Set the path of letswave to the folder of the dataset, like “C:\Users\Adminstrator\Desktop\SynologyDrive\rawdata1” here for example.<br />
+<img src="images/tu_ch1_1/Fig001.png" alt="Set Path" /></p>
+
+<p><br /></p>
+
+<p>Select <strong>File-&gt;Import-&gt;Import EEG/MEG datafiles</strong> in the menu of the manager module, then the dialog of import data will pop up. Press the button <strong>add files</strong> to add the file <strong><em>sub093.eeg</em></strong>. Press the the button <strong>import files</strong> to import the dataset. During the importing, it will display “processing”. Once the importing finished, the corresponding dataset will turn red and display “done”. Close the dialog of import data, the dataset “<strong><em>sub093</em></strong>” will be appeared in the manager module. <br />
+<img src="images/tu_ch1_1/Fig003.png" alt="import data1" />
+<img src="images/tu_ch1_1/Fig006.png" alt="import data2" />
+<img src="images/tu_ch1_1/Fig007.png" alt="import data2" /></p>
+
+<h2 id="4-dataset-checking">4. Dataset Checking</h2>
+<p>Selecting the dataset <strong><em>sub093</em></strong>, and click <strong>View-&gt;Continous Data Viewer</strong> in the menu to check the data quality of the imported dataset. <br />
+<img src="images/tu_ch1_1/Fig008c.png" alt="check data1" /></p>
+
+<p><br /></p>
+
+<p>In the viewer of the continous data, it can be see the channel P1 is obviously abnormal. A strong 50Hz power frequency interference covers the signal. Even after a notch filter, there is still a strong noise. Hence in the following steps, we treat channel <strong><em>P1</em></strong> as a bad electrode, which should be interpolated by the surround channels.<br />
+<img src="images/tu_ch1_1/Fig008d.png" alt="check data2" /></p>
+
+<h2 id="5-summary">5. Summary</h2>
+<p>In this chapter, the demonstrate the basic process of data import. Once the dataset has been imported, it will be appeared in the data list of the manager module. In Letswave7, one dataset is consisted with two files, which is <strong><em>.lw6</em></strong> and <strong><em>.mat</em></strong> files. Currently, Letswave7 is able to import the data file from the following mainstream format,</p>
+<ul>
+  <li>EEGLAB</li>
+  <li>ANT Neuro, eeprobe/cnt-rif</li>
+  <li>NeuroScan</li>
+  <li>Biosemi BDF</li>
+  <li>BrainVision</li>
+  <li>Electrical Geodesics, Inc. (EGI)</li>
+  <li>Generic standard formats</li>
+</ul>
+
+<p>For the other format data files, if it can be conversed to the format above, then it can be imported by Letswave7. Other if the data can be loaded by Matlab, it can also be imported by Letswave7.</p>
+
 
 
     <div class="tags">
-        
-        <b>Tags: </b>
-        
-        
-        
-        
-        
-        
         
     </div>
 
