@@ -406,14 +406,41 @@ $('#toc').on('click', 'a', function() {
     
 
   <h3 id="run-batch-processing">Run Batch Processing</h3>
-<p>By pressing the button “Run”, we can run the whole batch processing. In the step of <strong>Identify Artifact Component</strong>, we still manually select <strong>comp 1</strong>, <strong>comp 2</strong> in the right panel in orange color and click the button <strong>OK</strong>. The step for ICA matrix computing is time comsuming. It need round 1 mintues for computing ICA matrix. Downsampling would be an efficient way for reducing the processing time.</p>
+<p>By pressing the button “Run”, we can run the whole batch processing. In the step of <strong>Identify Artifact Component</strong>, we still manually select <strong>comp 1</strong>, <strong>comp 2</strong> in the right panel in orange color and click the button <strong>OK</strong>. It need more than 2 mintues for all the processing on the testing, in which the steps of computing ICA matrix is time comsuming. In reuslt, it would be exactly the same as the results of step by step operation.<br />
+<img src="images/tu_ch4_1/Fig412.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig416.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig413.png" alt="Removing channel IO" /></p>
 
-<h3 id="advanced-operation">Advanced operation</h3>
-<p>The whole batch processing are divided into four parts with difference colors. Each part is started by the step of <strong>load</strong>. The step of <strong>load</strong> may be added automatically, like in the step of <strong>channel selection</strong>, <strong>apply ICA filter</strong> and <strong>reference</strong> in our operation. It can be added manually by selecting “<strong>File-&gt;load</strong>”.</p>
+<h3 id="inputoutput-of-the-batch-operation">Input/Output of the Batch Operation</h3>
+<p>The whole batch processing are divided into four sessions with difference colors. Each session is started by the step of <strong>load</strong>. The step of <strong>load</strong> may be added automatically, like in the step of <strong>apply ICA filter</strong>, <strong>segmentation (one dataset per event code)</strong> and <strong>reference</strong> in our operation. It can be added manually by selecting “<strong>File-&gt;load</strong>”.</p>
 
-<p>In ea</p>
+<p>In fact, the aim of automatically added <strong>load</strong> operation is specify the input datasets for the system. In each step, it is necessary to figure out the input and output of the processing. In the step by step operation, the input is the selected dataset(s), and the output is the new dataset(s) with a prefix added.</p>
 
-<h3 id="save-the-bacth-processing">Save the Bacth Processing</h3>
+<p>In the batch operation, if a step of operation is a simple 1-in-1-out, it is clear that the ouput of one operation would be the input of the following operation. Hence, the system does not need the users to specify the input.</p>
+
+<p>However, some operations would be complicated, like <strong>segmentation (one dataset per event code)</strong> is 1-in-N-out, <strong>merge</strong>, <strong>ttest</strong> and <strong>ANOVA</strong> is N-in-1-out. Further <strong>Apply ICA filter</strong> is N-in-N-out operation since all the datasets will share the same ICA matrix and reomve the same components. For these operations, the condition of the input and output would be complicated for the system, hence Letswave7 automatically adds a <strong>load</strong> operation to ask the users specify the input datasets.</p>
+
+<p>Certainly, for some operation, if the input is not the output of the pervious operation, users can also add a <strong>load</strong> operation manually by selecting “<strong>File-&gt;load</strong>”.</p>
+
+<h3 id="intermediate-datasets-and-prefix">Intermediate Datasets and Prefix</h3>
+<p>In letswave7, each step will generate a new dataset with a prefix. Sometimes, the intermediate datesets is useless and occupying the hard disk, and the read/write operation is time consuming. Hence, we can not save the intermediate datasets by not check the <strong>save checkbox</strong> in the lower right corner.</p>
+
+<p>For the prefix, letswave7 assigns different prefixed for different operations, which it easy to know the operations history from the name of the dataset. If the users want to use their own prefix or even skip the prefix, they can specifiy the prefix in the <strong>prefix editbox</strong> in the lower right corner, or even replace it by <strong>empty</strong> to replace the input datasets, which is the nothing in the editbox, NOT the placeholder <strong>space</strong>.</p>
+
+<p>In this case, we can set the <strong>prefix editbox</strong> empty and check out the <strong>save checkbox</strong> for the intermediate steps of <strong>Selection</strong>, <strong>butterworth filter</strong>, <strong>chan_interp</strong>, <strong>reference</strong>, <strong>baseline_correction</strong>. Since the name of the datasets have been changed, we need to correspondingly remove the error datasets and adding the correct datasets for the input in the steps of the <strong>load</strong> operation. By click the button “Run”, the batch processing would be faster than before. In results, the intermediate datasets does not exist anymore.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> Setting the prefix <strong>empty</strong> is acturally replacing the input datasets. Be cautious that once the results are saved, it will overwrite the original datasets.</div>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The final result in each session need to be saved. Otherwise, all the processing is in vain, since no result has been saved on the hard dirve.</div>
+<p><br />
+<img src="images/tu_ch4_1/Fig414.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig417.png" alt="Removing channel IO" /></p>
+
+<h3 id="save-the-batch-processing">Save the Batch Processing</h3>
+<p>To reuse the batch, we can save the entire process. Click the <strong>save</strong> button in the toolbar of the batch module, and save the process as “P300.lw_script” for example. For the next time, we can click the <strong>open</strong> button to load the process. It should be noticed that since the processing object has been changed, the user need to change the input datasets in all the steps of <strong>load</strong>.</p>
+
+<p>If the batch processing is frequently used, we can put the saved <strong>.lw_script</strong> file, like “P300.lw_script” in this case, into the path of the letswave installed “<strong>../letswave7/plugins/</strong>”. After that, restart letswave7 and the batch operation will come out in the menu of the batch in both the manager module and batch module.<br />
+<img src="images/tu_ch4_1/Fig422.png" alt="Removing channel IO" /></p>
 
 
 
@@ -432,7 +459,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 9, 2018 <br />
+ Site last generated: Sep 10, 2018 <br />
                 </div>
             </div>
 </footer>

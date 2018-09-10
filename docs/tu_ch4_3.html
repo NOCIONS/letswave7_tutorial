@@ -405,19 +405,34 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h3 id="script-for-data-import">Script for Data Import</h3>
-<h3 id="script-for-processing">Script for Processing</h3>
-<h3 id="script-for-figure">Script for Figure</h3>
+  <p>In addition to the graphical user interface (GUI), script may be the most commonly used feature in Letswave7. Script provides users more freedom in the EEG processing, but also requires users to have a more solid programming foundation, which makes it difficult for the reserachers without relevant backgrounds to use. Letswave7 is dedicated to solving this problem.</p>
 
-<h3 id="step-4-time-frequency-analysis">Step 4. Time-Frequency Analysis</h3>
-<h4 id="1-loading-the-dataset">1. Loading the Dataset</h4>
-<p>Click the tab <strong>average_epoch</strong> and select <strong>File-&gt;load</strong> in the batch module. Click the tab <strong>load</strong> on the left and click <strong>add</strong> and add dataset “<strong><em>bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”.</p>
+<h3 id="script-of-batch-processing">Script of Batch Processing</h3>
+<p>In Letswave7, the system runs a batch processing by running the corresponding Matlab script. Once the processing flow has been made, the corresponding Matlab script has already been generated automatically. Users can click the “<strong>script</strong>” button in the batch module to get the full script. Hence the users, who have learned the use of GUI, almost already understand the writing of script.</p>
 
-<h4 id="2-cwt-and-averaging">2. CWT and Averaging</h4>
-<p>Click the tab <strong>load</strong> and select <strong>Plugins-&gt;my_tfa-&gt;Averaged CWT</strong> in the batch module and keep the dafault parameter setting for CWT.</p>
+<h3 id="script-of-single-step">Script of Single Step</h3>
+<p>The script for the single step operation can also be get with the “<strong>script</strong>” button in the lower right corner in each step of batch processing, which can tangibly reduce the users’ dependence on the tutorial and the help document. This feature is essential, since it can effectively help the script-based user to speed up the script writing and improve the quality the script quality. More importantly, it can really reduce the script-based user’s entry threshold. Even the users without a solid background for Matlab programming are able to write high quality script for batch EEG signal processing.</p>
 
-<h4 id="3-baseline-correction">3. Baseline Correction</h4>
-<p>Click the tab <strong>avg_CWT</strong> and select <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the batch module and set the <strong>-0.75</strong> to <strong>-0.25</strong> seconds as the baseline.</p>
+<p>In Letswave, we provide a rich library of functions for the script-based users, which are starting with <strong>FLW_</strong>. The grammar of all the functions in this library is uniform. For one step of operation, we need just need define the option and then call the corresponding FLW function.</p>
+
+<div class="language-matlab highlighter-rouge"><pre class="highlight"><code><span class="n">option</span><span class="o">=</span><span class="nb">struct</span><span class="p">(</span><span class="s1">'XXX'</span><span class="p">,</span><span class="n">xxx</span><span class="p">,</span><span class="s1">'XXX'</span><span class="p">,</span><span class="n">xxx</span><span class="p">);</span>             
+<span class="n">lwdata</span><span class="o">=</span> <span class="n">FLW_XXX</span><span class="o">.</span><span class="n">get_lwdata</span><span class="p">(</span><span class="n">lwdata</span><span class="p">,</span><span class="n">option</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>The parameters setting in the option is identical to the parameters selection in the GUI. It just needs to be noticed whether the input and output of the function is a single dataset or multiple datasets.</p>
+
+<h3 id="easy-access-to-the-data">Easy Access to the Data</h3>
+<p>Each dataset can be easily accessed by clicking “<strong>send to workspace</strong>” in the right menu in the manager module, which would be appeared as a variable with the name of “<strong>lwdata</strong>” in the workspace of Matlab. Then the script-based user can make their own operation on the dataset in Matlab. After the operation, the user can also save the dataset in the format of Letswave by clicking “<strong>read from workspace</strong>” in the right menu in the manager module.</p>
+
+<p>Similarly, the other information is also easily to be accessed in the other modules, such as the event information, the channel name and statistical result about the mean, maximum and minimum value.</p>
+
+<h3 id="script-of-data-importing-and-figure-generation">Script of Data Importing and Figure Generation</h3>
+<p>Not only the operations in the batch module, the other operations, like data import and figure generation, can also be scriptlized.</p>
+
+<p>Hence, from data import, to preprocessing, time/frequency analysis and statistical analysis, to the final figure generation, the whole process can be easily and quickly written as a script for the EEG signal analysis.</p>
+
+<h3 id="example">Example</h3>
 
 
 
@@ -436,7 +451,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 9, 2018 <br />
+ Site last generated: Sep 10, 2018 <br />
                 </div>
             </div>
 </footer>

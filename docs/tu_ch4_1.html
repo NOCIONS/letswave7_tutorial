@@ -407,40 +407,53 @@ $('#toc').on('click', 'a', function() {
 
   <p>In this chapter, we will redo all the process again, which is exactly the same as it is in the previous tutorial but using batch processing.</p>
 
-<h4 id="step-0-data-import">Step 0. Data Import</h4>
+<h3 id="step-0-data-import">Step 0. Data Import</h3>
 <p>Download the <a href="https://github.com/NOCIONS/letswave7_tutorial/raw/master/rawdata1.zip">tutorial dataset (12M)</a>. Unzip the rawdata1.zip file, there are three file, which are <strong><em>sub093.eeg</em></strong>, <strong><em>sub093.vhdr</em></strong>, and <strong><em>sub093.vmrk</em></strong>.</p>
 
 <p>Open Matlab, and input “<strong><em>letswave7</em></strong>” in the commond windows of Matlab to open Letswave7. Set the path of letswave to the folder of the dataset, like “/Users/huanggan/sync/SynologyDrive/rawdata1” on my computer for example.</p>
 
 <p>Select <strong>File-&gt;Import-&gt;Import EEG/MEG datafiles</strong> in the menu of the manager module, then the dialog of import data will pop up. Press the button <strong>add files</strong> to add the file <strong><em>sub093.eeg</em></strong>. Press the the button <strong>import files</strong> to import the dataset. During the importing, it will display “processing”. Once the importing finished, the corresponding dataset will turn red and display “done”.</p>
 
-<h4 id="step-1-removing-channel-io">Step 1. Removing channel IO</h4>
-<p>Select the dataset “<strong><em>sub093</em></strong>”” in the data list of the manager module, and click <strong>Edit-&gt;Arrange signals-&gt;Rearrange or delete epochs, channels, indexes</strong> in the menu. In the batch module, press the button <strong>Add all</strong> to add all the channels into left listbox. Then select channel <strong><em>IO</em></strong> and press button <strong>Remove</strong> to delete channel <strong><em>IO</em></strong>.</p>
+<h3 id="step-1-removing-channel-io">Step 1. Removing channel IO</h3>
+<p>Select the dataset “<strong><em>sub093</em></strong>”” in the data list of the manager module, and click <strong>Edit-&gt;Arrange signals-&gt;Rearrange or delete epochs, channels, indexes</strong> in the menu. In the batch module, press the button <strong>Add all</strong> to add all the channels into left listbox. Then select channel <strong><em>IO</em></strong> and press button <strong>Remove</strong> to delete channel <strong><em>IO</em></strong>.<br />
+<img src="images/tu_ch4_1/Fig400.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-2-frequency-filtering">Step 2. Frequency filtering</h4>
+<h3 id="step-2-frequency-filtering">Step 2. Frequency filtering</h3>
 <p>Click the tab <strong>selection</strong> in the left and select <strong>Process-&gt;Frequency analysis and filters-&gt;Butterworth filters</strong> in the menu of the <strong>batch module</strong> and set the low cutoff frequency(Hz) as <strong>0.05Hz</strong>.</p>
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> From this step, the operation in the batch processing would be different. We call out the butterworth filter from the batch module, <strong>NOT</strong> the manager module.</div>
+<p><br />
+<img src="images/tu_ch4_1/Fig401.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig402.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-3-bad-electrodes-interpolation">Step 3. Bad electrodes interpolation</h4>
-<p>Click the tab <strong>Butterworth filter</strong> and select <strong>Edit-&gt;Electrodes-&gt;Interpolate channel using neighbouring electrodes</strong> in the batch module. Select channel <strong><em>P1</em></strong> in the <strong>Channel to Interpolate</strong> list box, then click the button <strong>Find cloest electrodes</strong>.</p>
+<h3 id="step-3-bad-electrodes-interpolation">Step 3. Bad electrodes interpolation</h3>
+<p>Click the tab <strong>Butterworth filter</strong> and select <strong>Edit-&gt;Electrodes-&gt;Interpolate channel using neighbouring electrodes</strong> in the batch module. Select channel <strong><em>P1</em></strong> in the <strong>Channel to Interpolate</strong> list box, then click the button <strong>Find cloest electrodes</strong>.<br />
+<img src="images/tu_ch4_1/Fig403.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-4-computer-ica-matrix">Step 4. Computer ICA Matrix</h4>
-<p>Click the tab <strong>chan interp</strong> and select <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Computer ICA matrix</strong> in the batch module. Select number of components as <strong><em>deside by user</em></strong> and set the Components Numbers as <strong>40</strong>.</p>
+<h3 id="step-4-computer-ica-matrix">Step 4. Computer ICA Matrix</h3>
+<p>Click the tab <strong>chan interp</strong> and select <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Computer ICA matrix</strong> in the batch module. Select number of components as <strong><em>deside by user</em></strong> and set the Components Numbers as <strong>40</strong>.<br />
+<img src="images/tu_ch4_1/Fig404.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-5-identify-artifact-component">Step 5. Identify Artifact Component</h4>
-<p>Click the tab <strong>ICA</strong> and select  <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Apply ICA/PCA spatial filter</strong> in the the batch module. Two tabs, <strong>load</strong> and <strong>apply filter</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>ica chan_interp butt sel_chan sub093</em></strong>”. Click the tab <strong>apply filter</strong>, no options need to be set there.</p>
+<h3 id="step-5-identify-artifact-component">Step 5. Identify Artifact Component</h3>
+<p>Click the tab <strong>ICA</strong> and select  <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Apply ICA/PCA spatial filter</strong> in the the batch module. Two tabs, <strong>load</strong> and <strong>apply filter</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>ica chan_interp butt sel_chan sub093</em></strong>”. Click the tab <strong>apply filter</strong>, no options need to be set there.<br />
+<img src="images/tu_ch4_1/Fig405.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-6-segmentationepoching">Step 6. Segmentation/Epoching</h4>
-<p>Click the tab <strong>apply filter</strong> and select <strong>Process-&gt;Epoch segmentation-&gt;Segment relative to events (one file per event code)</strong> in the batch module. Again two tabs, <strong>load</strong> and <strong>segmentation se…</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Then click the tab <strong>segmentation se…</strong>,  select Event codes <strong><em>S  9</em></strong> and <strong><em>S 10</em></strong>, and set the epoch starting and epoch end time as <strong><em>-1</em></strong> and <strong><em>2</em></strong>.</p>
+<h3 id="step-6-segmentationepoching">Step 6. Segmentation/Epoching</h3>
+<p>Click the tab <strong>apply filter</strong> and select <strong>Process-&gt;Epoch segmentation-&gt;Segment relative to events (one file per event code)</strong> in the batch module. Again two tabs, <strong>load</strong> and <strong>segmentation se…</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Then click the tab <strong>segmentation se…</strong>,  select Event codes <strong><em>S  9</em></strong> and <strong><em>S 10</em></strong>, and set the epoch starting and epoch end time as <strong><em>-1</em></strong> and <strong><em>2</em></strong>.<br />
+<img src="images/tu_ch4_1/Fig406.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig407.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-7-rereference">Step 7. Rereference</h4>
-<p>Click the tab <strong>segmentation se…</strong> and select <strong>Process-&gt;Rereference signals-&gt;Rereference</strong> in the batch module. Again two tabs, <strong>load</strong> and <strong>rereference</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Then click the tab <strong>rereference</strong>, select the <strong>TP9</strong> and <strong>TP10</strong> as the <strong>new reference</strong> in the left list box and select all channels in the right list box for <strong>apply reference to</strong>.</p>
+<h3 id="step-7-rereference">Step 7. Rereference</h3>
+<p>Click the tab <strong>segmentation se…</strong> and select <strong>Process-&gt;Rereference signals-&gt;Rereference</strong> in the batch module. Again two tabs, <strong>load</strong> and <strong>rereference</strong> appear on the left. Click the tab <strong>load</strong> and click <strong>add</strong> and add dataset “<strong><em>ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>”. Then click the tab <strong>rereference</strong>, select the <strong>TP9</strong> and <strong>TP10</strong> as the <strong>new reference</strong> in the left list box and select all channels in the right list box for <strong>apply reference to</strong>.<br />
+<img src="images/tu_ch4_1/Fig408.png" alt="Removing channel IO" />
+<img src="images/tu_ch4_1/Fig409.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-8-baseline-correction">Step 8. Baseline Correction</h4>
-<p>Click the tab <strong>rereference</strong> and select <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the batch module. Here only one tab, <strong>baseline correction</strong> appears on the left. Keep the dafault setting for the baseline correction.</p>
+<h3 id="step-8-baseline-correction">Step 8. Baseline Correction</h3>
+<p>Click the tab <strong>rereference</strong> and select <strong>Process-&gt;Baseline operation-&gt;Baseline correction</strong> in the batch module. Here only one tab, <strong>baseline correction</strong> appears on the left. Keep the dafault setting for the baseline correction.<br />
+<img src="images/tu_ch4_1/Fig410.png" alt="Removing channel IO" /></p>
 
-<h4 id="step-9-averaging">Step 9. Averaging</h4>
-<p>Click the tab <strong>baseline correction</strong> and select <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong> in the batch module. Here only one tab, <strong>average_epoch</strong> appears on the left. Keep the dafault setting for the baseline correction.</p>
+<h3 id="step-9-averaging">Step 9. Averaging</h3>
+<p>Click the tab <strong>baseline correction</strong> and select <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong> in the batch module. Here only one tab, <strong>average_epoch</strong> appears on the left. Keep the dafault setting for the baseline correction.<br />
+<img src="images/tu_ch4_1/Fig411.png" alt="Removing channel IO" /></p>
 
 <p>To this end, we have finished the work for assigning batch processing. Running the batch processing will be introducted in the next chapter.</p>
 
@@ -461,7 +474,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 9, 2018 <br />
+ Site last generated: Sep 10, 2018 <br />
                 </div>
             </div>
 </footer>
