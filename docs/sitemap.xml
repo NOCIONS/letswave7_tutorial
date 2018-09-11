@@ -1,193 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  
-  <url>
-    <loc>http://letswave.cn/samplepost.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/myupdate.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/test-post-from-last-year.html</loc>
-  </url>
-  
-  
-
-
-  
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/LW_batch.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/LW_manager.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/all_docs.html</loc>
-  </url>
-  
-  
-  
-  
-  
   <url>
     <loc>http://letswave.cn/gs_download_and_installation.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/gs_framework.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/gs_general_info.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/index.html</loc>
   </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/news.html</loc>
-  </url>
-  
-  
-  
-  <url>
-    <loc>http://letswave.cn/news_archive.html</loc>
-  </url>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch0_getting_started.html</loc>
   </url>
   
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_1.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_2.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_3.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_4.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_5.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch1_signal_subject.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch2_1.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch2_2.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch2_multiple_subject.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch3_1.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch3_2.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch3_figure_genertaion.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch4_1.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch4_2.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch4_3.html</loc>
   </url>
-  
-  
-  
   <url>
     <loc>http://letswave.cn/tu_ch4_batch_script.html</loc>
   </url>
-  
-  
 </urlset>
