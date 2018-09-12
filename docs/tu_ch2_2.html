@@ -408,18 +408,18 @@ $('#toc').on('click', 'a', function() {
   <h2 id="hypothesis-driven-vs-data-driven">Hypothesis-driven vs. Data-driven</h2>
 <p>Normally there are two ways to make statistical inferences, which are hypothesis-driven and data-driven approaches respectively.</p>
 
-<p>With the hypothesis-driven approach used in the analysis of P300, we empirically propose a hypothesis based on our observation of the data or the previous experience, such as the hypothesis that the maximum or mean of ERP from the predefined interval 0.2 to 0.7s would be different between target and nontarget conditions. With the hypothesis, a limited number of t-test or ANOVA would be conducted to test the proposed hypothesis. Hypothesis driven approach can is an effective way to explore neuropsychological mechanisms based on the EEG analysis. However, in the hypothesis-driven approach, the result highly depends on researchers?? subjective experience. Firstly, the interval selection from 0.2 to 0.7s is based on the subjective experience, in which the result would be sensitive to the parameter selection. Secondly, if the interval selection is based on the data observation, then it is easy to leads to make a false positive error since the difference may be caused by random effect. Thirdly, for more complex data, researcher??s observation usually is not sufficient, which means some interesting result would be missing, since the data outside the interval has not be analyzed.</p>
+<p>With the hypothesis-driven approach used in the analysis of P300, we empirically propose a hypothesis based on our observation of the data or the previous experience, such as the hypothesis that the maximum or mean of ERP from the predefined interval 0.2 to 0.7s would be different between target and nontarget conditions. With the hypothesis, a limited number of t-test or ANOVA would be conducted to test the proposed hypothesis. Hypothesis driven approach can is an effective way to explore neuropsychological mechanisms based on the EEG analysis. However, in the hypothesis-driven approach, the result highly depends on researchers’ subjective experience. Firstly, the interval selection from 0.2 to 0.7s is based on the subjective experience, in which the result would be sensitive to the parameter selection. Secondly, if the interval selection is based on the data observation, then it is easy to leads to make a false positive error since the difference may be caused by random effect. Thirdly, for more complex data, researcher’s observation usually is not sufficient, which means some interesting result would be missing, since the data outside the interval has not be analyzed.</p>
 
-<p>Data-driven approach provides a more objective approach for the EEG analysis, by comparing the ERPs at an exhaustive of time, frequency and spatial points. Such a point-wise comparison would make a more comprehensive understanding of the data. Hence, the data-driven approach can effectively avoid the bias caused by the subjec-tive experience, which also improves the repeatable of the data analysis. Further, the point-wise analysis can tell you exactly where and when an effect occurs. As computers become faster and cheaper, data-driven approach is becoming more widely used. However, With the drastically increase of the number of hypothesis testing in the data-driven approach, we have to face the Family-Wise Error Rate (FWER) in the multiple comparison problem.</p>
+<p>Data-driven approach provides a more objective approach for the EEG analysis, by comparing the ERPs at an exhaustive of time, frequency and spatial points. Such a point-wise comparison would make a more comprehensive understanding of the data. Hence, the data-driven approach can effectively avoid the bias caused by the subjective experience, which also improves the repeatable of the data analysis. Further, the point-wise analysis can tell you exactly where and when an effect occurs. As computers become faster and cheaper, data-driven approach is becoming more widely used. However, With the drastically increase of the number of hypothesis testing in the data-driven approach, we have to face the Family-Wise Error Rate (FWER) in the multiple comparison problem.</p>
 
 <h3 id="1-bonferroni-correction">1. Bonferroni Correction</h3>
-<p>Bonferroni method can be used for the FWER correction.  is famous for its simplicity. By decreasing the significant level α to α/m for m indenpendent test, Bonferroni correction strictly controls the global false positive rate to α. However, EEG data are highly correlated with their neighbors in the time, frequency, or spatial domain, which violates the independent assumption in Bonferroni correction. This correction comes at the cost of greatly increasing the probability of producing false negatives, and consequently reducing statistical power.</p>
+<p>Bonferroni method can be used for the FWER correction.  is famous for its simplicity. By decreasing the significant level α to α/m for m independent test, Bonferroni correction strictly controls the global false positive rate to α. However, EEG data are highly correlated with their neighbors in the time, frequency, or spatial domain, which violates the independent assumption in Bonferroni correction. This correction comes at the cost of greatly increasing the probability of producing false negatives, and consequently reducing statistical power.</p>
 
 <h3 id="2-cluster-based-permutation-test">2. Cluster Based Permutation Test</h3>
 <p>Cluster-based permutation test, <a href="http://www.ncbi.nlm.nih.gov/pubmed/17517438">proposed by Maris</a>, uses the cluster-level statistic t_max instead of the point level statistic t_max, so that it can drastically increase the sensitivity of the statistical test while strictly controls the FWER. As a weak FWER control method, cluster-based permutation test provides a higher sensitivity than false discovery rate methods.</p>
 
 <h2 id="hypothesis-driven-test">Hypothesis-driven Test</h2>
-<p>In this manuel, we show the statistical inferences with the hypothesis that,</p>
+<p>In this manual, we show the statistical inferences with the hypothesis that,</p>
 
 <blockquote>
   <p>The maximum or mean value of ERP from the predefined interval 0.2 to 0.7s at channel Pz would be different between target and nontarget conditions.</p>
@@ -427,7 +427,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>Paired-sample t-test is performed on the 93 subjects. Hence, firstly we need to pick up the maximum and mean value from the interval 0.2 to 0.7s  at channel Pz for both  target and nontarget conditions.</p>
 
-<p>Select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select dataset <strong>merge_epoch Sub001 P300 target</strong>, and channel <strong>Pz</strong>, set the Superimposed waves as <strong>epochs</strong>, enable the <strong>interval selection</strong> in the toobar, and set the explore interval as <strong>0.2</strong> to <strong>0.7</strong> s. Press the button “Table”, we can a table for the statistic of the maximum and mean value, copy these data to the external software, such as Excel or SPSS, for the following statistical analysis. Certainly, Matlab can also do the same work. User can chose the software they prefer to do the statistical analysis. For sure, the results should be the same.
+<p>Select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select dataset <strong>merge_epoch Sub001 P300 target</strong>, and channel <strong>Pz</strong>, set the Superimposed waves as <strong>epochs</strong>, enable the <strong>interval selection</strong> in the toobar, and set the explore interval as <strong>0.2</strong> to <strong>0.7</strong> s. Press the button “Table”, we can a table for the statistic of the maximum and mean value, copy these data to the external software, such as Excel or SPSS, for the following statistical analysis. Certainly, Matlab can also do the same work. User can choose the software they prefer to do the statistical analysis. For sure, the results should be the same.
 <br />
 <img src="images/tu_ch2_2/Fig076.png" alt="Hypothesis-driven Test1" />
 <img src="images/tu_ch2_2/Fig084.png" alt="Hypothesis-driven Test1" />
@@ -435,7 +435,7 @@ $('#toc').on('click', 'a', function() {
 
 <p><br /></p>
 
-<p>Similarly, select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and press the button “Table”, pick up the same value on another dataset and copy it to the external softwave.
+<p>Similarly, select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and press the button “Table”, pick up the same value on another dataset and copy it to the external software.
 <br />
 <img src="images/tu_ch2_2/Fig079.png" alt="Hypothesis-driven Test1" /></p>
 
@@ -452,12 +452,12 @@ $('#toc').on('click', 'a', function() {
 <br />
 <img src="images/tu_ch2_2/Fig094.png" alt="Hypothesis-driven Test1" /></p>
 
-<p>To watch the reuslt on Pz channel by clicking the <strong>view</strong> in the right-click menu, we set the channel as <strong>Pz</strong>, keep the index as <strong>p-value</strong>. Since we set the significant level α = 0.05, we can set the Y-axis as <strong>0</strong> to <strong>0.05</strong> to watch the interval with the p-value lower than 0.05. It could be find except the main cluster around 0.2-0.7 seconds, there are still several clusters in the other time intervals, even before the stimulus. Hence, it is observiouly that there is the family-wise error rate is high. The Bonferroni Correction would be conservative. Since  there are 750 time points and 63 channels in the test, the corrected α value by Bonferroni method is <strong>0.05/750/63 = 10^-6</strong>.
+<p>To watch the result on Pz channel by clicking the <strong>view</strong> in the right-click menu, we set the channel as <strong>Pz</strong>, keep the index as <strong>p-value</strong>. Since we set the significant level α = 0.05, we can set the Y-axis as <strong>0</strong> to <strong>0.05</strong> to watch the interval with the p-value lower than 0.05. It could be found except the main cluster around 0.2-0.7 seconds, there are still several clusters in the other time intervals, even before the stimulus. Hence, it is obviously that there is the family-wise error rate is high. The Bonferroni Correction would be conservative. Since  there are 750 time points and 63 channels in the test, the corrected α value by Bonferroni method is <strong>0.05/750/63 = 10^-6</strong>.
 <br />
 <img src="images/tu_ch2_2/Fig104.png" alt="Hypothesis-driven Test1" /></p>
 
 <h3 id="2-cluster-based-permutation-test-1">2. Cluster-based Permutation Test</h3>
-<p>Hence, we need to do cluster-based permutation test for the multiple comparsion correction. Letswave7 provides two ways for the cluster-based permutation test, which are single-sensor analysis and multi-sensor analysis.</p>
+<p>Hence, we need to do cluster-based permutation test for the multiple comparison correction. Letswave7 provides two ways for the cluster-based permutation test, which are single-sensor analysis and multi-sensor analysis.</p>
 
 <h4 id="21-single-sensor-analysis">2.1 Single-sensor analysis</h4>
 <p>For the cluster-based permutation test, we can detect the cluster for each channel separately. With the same way in the point-wise t-test, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”.</p>
@@ -474,7 +474,7 @@ $('#toc').on('click', 'a', function() {
 <h4 id="22-multi-sensor-analysis">2.2 Multi-sensor analysis</h4>
 <p>On these datasets, we do the multi-sensor analysis by detecting the cluster in the time-spatial joint domain. Similarly, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Enable the bottom panel for the <strong>Cluster-based Permutation Test</strong> and set the number of permutation as <strong>20000</strong>.</p>
 
-<p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold is considered as neighbours. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
+<p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold are considered as neighbours. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
 <br />
 <img src="images/tu_ch2_2/Fig102.png" alt="Single-sensor analysis" />
 <img src="images/tu_ch2_2/Fig097.png" alt="Single-sensor analysis" /></p>
@@ -502,7 +502,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 10, 2018 <br />
+ Site last generated: Sep 12, 2018 <br />
                 </div>
             </div>
 </footer>
