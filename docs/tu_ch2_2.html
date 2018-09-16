@@ -427,7 +427,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>Paired-sample t-test is performed on the 93 subjects. Hence, firstly we need to pick up the maximum and mean value from the interval 0.2 to 0.7s  at channel Pz for both  target and nontarget conditions.</p>
 
-<p>Select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select dataset <strong>merge_epoch Sub001 P300 target</strong>, and channel <strong>Pz</strong>, set the Superimposed waves as <strong>epochs</strong>, enable the <strong>interval selection</strong> in the toobar, and set the explore interval as <strong>0.2</strong> to <strong>0.7</strong> s. Press the button “Table”, we can a table for the statistic of the maximum and mean value, copy these data to the external software, such as Excel or SPSS, for the following statistical analysis. Certainly, Matlab can also do the same work. User can choose the software they prefer to do the statistical analysis. For sure, the results should be the same.
+<p>Select the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click the <strong>view</strong> in the right-click menu. In the multiviewer for the waveform, select dataset <strong>merge_epoch Sub001 P300 target</strong>, and channel <strong>Pz</strong>, set the Superimposed waves as <strong>epochs</strong>, enable the <strong>interval selection</strong> in the toolbar, and set the explore interval as <strong>0.2</strong> to <strong>0.7</strong> s. Press the button “Table”, we can a table for the statistic of the maximum and mean value, copy these data to the external software, such as Excel or SPSS, for the following statistical analysis. Certainly, Matlab can also do the same work. User can choose the software they prefer to do the statistical analysis. For sure, the results should be the same.
 <br />
 <img src="images/tu_ch2_2/Fig076.png" alt="Hypothesis-driven Test1" />
 <img src="images/tu_ch2_2/Fig084.png" alt="Hypothesis-driven Test1" />
@@ -448,7 +448,7 @@ $('#toc').on('click', 'a', function() {
 <h2 id="data-driven-test">Data-driven Test</h2>
 
 <h3 id="1-point-wise-t-test">1. Point-wise T-Test</h3>
-<p>For the data-driven test, we need to do t-test for each time-channel point, which would lead to serious multiple comparison problem. For example, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to get the pointwise ttest result “<strong>ttest merge_epoch Sub001 P300 target</strong>” in the manager module. 
+<p>For the data-driven test, we need to do t-test for each time-channel point, which would lead to serious multiple comparison problem. For example, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to get the point-wise ttest result “<strong>ttest merge_epoch Sub001 P300 target</strong>” in the manager module. 
 <br />
 <img src="images/tu_ch2_2/Fig094.png" alt="Hypothesis-driven Test1" /></p>
 
@@ -474,7 +474,7 @@ $('#toc').on('click', 'a', function() {
 <h4 id="22-multi-sensor-analysis">2.2 Multi-sensor analysis</h4>
 <p>On these datasets, we do the multi-sensor analysis by detecting the cluster in the time-spatial joint domain. Similarly, select  the datasets “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>” and click “<strong>Statistics-&gt;Compare two datasets (paired sample/two sample t-test)</strong>”. Enable the bottom panel for the <strong>Cluster-based Permutation Test</strong> and set the number of permutation as <strong>20000</strong>.</p>
 
-<p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold are considered as neighbours. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
+<p>For the multi-sensor analysis, we just need to enable the “<strong>Multi-sensor analysis</strong>” and define the connection by setting the threshold. The two channels with their distance lower than the threshold are considered as neighbors. It is found with the threshold 0.16, all the channels become a connected graph. Hence, we set the threshold as <strong>0.16</strong>. Click the button <strong>Run</strong>, and it may need more than 1 hour for the computation. The result with the same name “<strong>ttest merge_epoch Sub001 P300 target</strong>” will cover the original dataset.
 <br />
 <img src="images/tu_ch2_2/Fig102.png" alt="Single-sensor analysis" />
 <img src="images/tu_ch2_2/Fig097.png" alt="Single-sensor analysis" /></p>
@@ -502,7 +502,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 12, 2018 <br />
+ Site last generated: Sep 16, 2018 <br />
                 </div>
             </div>
 </footer>

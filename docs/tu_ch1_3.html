@@ -407,7 +407,7 @@ $('#toc').on('click', 'a', function() {
 
   <h2 id="theory-and-model-of-icabss">Theory and Model of ICA/BSS</h2>
 <p>Independent Component Analysis (ICA) is a kind of Blind Signal Separation (BSS) method. Linearly, ICA can be modeled as following figure<br />
-<img src="images/tu_ch1_3/Fig001.png" alt="ICA Princple" /></p>
+<img src="images/tu_ch1_3/Fig001.png" alt="ICA Principle" /></p>
 
 <p>Consider <strong>X</strong> is the recorded EEG signal with the dimension <em>channel</em> × <em>time</em>, <strong>S</strong> is the source signal with the dimension <em>component</em> × <em>time</em>, <strong>A</strong> is the mixing matrix with the dimension <em>channel</em> × <em>component</em>. The aim of ICA is to find the mixing matrix <strong>A</strong> to make each component (each row) to be independent of each other. According to the linear model, we use ICA for artifact removing in EEG signal processing by follow steps</p>
 <ol>
@@ -453,7 +453,7 @@ $('#toc').on('click', 'a', function() {
     <p>In this case, we run the ICA by selecting the number of the components as <strong>40</strong>. Normally, the maximum number of independent components that can be separated is equal to number of channels in the original signal <strong>X</strong>. If <strong>X</strong> has been referenced, the maximum number should minus 1. For each channel has been interpolated, the maximum number should minus 1 again. In addition, decreasing the number of independent components to separate is a way to reduce the computing time for the ICA matrix. In this case, since the channel number 64 is large enough, we set the number of independent components as 40 is OK.</p>
   </li>
   <li>
-    <p>Since the computing of ICA matrix is time comsuming, several ways could shorten the time for computing ICA matrix. In addition to reducing the component number for separating, downsampling would be another effective way. In this case, the sampling rate is 1000Hz. For ICA matrix computing, you can  downsample the dataset to 100Hz by selecting <strong>Edit-&gt;Resample Signals-&gt;Downsample signals (integer ratio)</strong> in the menu. Once you already have the ICA matrix from the downsampled data, you can assign the ICA matrix to the dataset before downsampling by selecting <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Assign ICA/PCA Matrix</strong> operation in the menu. After assigning the matrix, we can similarly to indetify the components with artifact by selecting <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Apply ICA/PCA spatial filter</strong> in the menu.</p>
+    <p>Since the computing of ICA matrix is time consuming, several ways could shorten the time for computing ICA matrix. In addition to reducing the component number for separating, down sampling would be another effective way. In this case, the sampling rate is 1000Hz. For ICA matrix computing, you can  down sample the dataset to 100Hz by selecting <strong>Edit-&gt;Resample Signals-&gt;Downsample signals (integer ratio)</strong> in the menu. Once you already have the ICA matrix from the down sampled data, you can assign the ICA matrix to the dataset before down sampling by selecting <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Assign ICA/PCA Matrix</strong> operation in the menu. After assigning the matrix, we can similarly to identify the components with artifact by selecting <strong>Process-&gt;Spatial filters(ICA/PCA)-&gt;Apply ICA/PCA spatial filter</strong> in the menu.</p>
   </li>
 </ol>
 
@@ -473,7 +473,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 12, 2018 <br />
+ Site last generated: Sep 16, 2018 <br />
                 </div>
             </div>
 </footer>

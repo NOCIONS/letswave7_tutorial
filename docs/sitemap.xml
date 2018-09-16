@@ -1,67 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://letswave.cn/gs_download_and_installation.html</loc>
-  </url>
-  <url>
-    <loc>http://letswave.cn/gs_framework.html</loc>
-  </url>
-  <url>
-    <loc>http://letswave.cn/gs_general_info.html</loc>
-  </url>
-  <url>
-    <loc>http://letswave.cn/index.html</loc>
-  </url>
-  <url>
-    <loc>http://letswave.cn/tu_ch0_getting_started.html</loc>
-  </url>
+  
   
   <url>
-    <loc>http://letswave.cn/tu_ch1_1.html</loc>
+    <loc>http://localhost:4000/samplepost.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch1_2.html</loc>
+    <loc>http://localhost:4000/myupdate.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch1_3.html</loc>
+    <loc>http://localhost:4000/test-post-from-last-year.html</loc>
   </url>
+  
+  
+
+
+  
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch1_4.html</loc>
+    <loc>http://localhost:4000/LW_batch.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch1_5.html</loc>
+    <loc>http://localhost:4000/LW_manager.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch1_signal_subject.html</loc>
+    <loc>http://localhost:4000/all_docs.html</loc>
   </url>
+  
+  
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch2_1.html</loc>
+    <loc>http://localhost:4000/gs_download_and_installation.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch2_2.html</loc>
+    <loc>http://localhost:4000/gs_framework.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch2_multiple_subject.html</loc>
+    <loc>http://localhost:4000/gs_general_info.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch3_1.html</loc>
+    <loc>http://localhost:4000/index.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch3_2.html</loc>
+    <loc>http://localhost:4000/news.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch3_figure_genertaion.html</loc>
+    <loc>http://localhost:4000/news_archive.html</loc>
   </url>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch4_1.html</loc>
+    <loc>http://localhost:4000/tu_ch0_getting_started.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch4_2.html</loc>
+    <loc>http://localhost:4000/tu_ch1_1.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch4_3.html</loc>
+    <loc>http://localhost:4000/tu_ch1_2.html</loc>
   </url>
+  
+  
+  
   <url>
-    <loc>http://letswave.cn/tu_ch4_batch_script.html</loc>
+    <loc>http://localhost:4000/tu_ch1_3.html</loc>
   </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch1_4.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch1_5.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch1_signal_subject.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch2_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch2_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch2_multiple_subject.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch3_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch3_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch3_figure_genertaion.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_1.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_2.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_3.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/tu_ch4_batch_script.html</loc>
+  </url>
+  
+  
 </urlset>

@@ -405,15 +405,19 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <p>In addition to the graphical user interface (GUI), script may be the most commonly used feature in Letswave7. Script provides users more freedom in the EEG processing, but also requires users to have a more solid programming foundation, which makes it difficult for the researchers without relevant backgrounds to use. Letswave7 is dedicated to solving this problem.</p>
+  <h3 id="script-in-letswave7">Script in Letswave7</h3>
+<p>In addition to the graphical user interface (GUI), script may be the most commonly used feature in Letswave7. Script provides users more freedom in the EEG processing, but also requires users to have a more solid programming foundation, which makes it difficult for the researchers without relevant backgrounds to use. Letswave7 is dedicated to solving this problem.</p>
 
-<h3 id="script-of-batch-processing">Script of Batch Processing</h3>
-<p>In Letswave7, the system runs a batch processing by running the corresponding Matlab script. Once the processing flow has been made, the corresponding Matlab script has already been generated automatically. Users can click the “<strong>script</strong>” button in the batch module to get the full script. Hence the users, who have learned the use of GUI, almost already understand the writing of script.</p>
+<h4 id="script-of-batch-processing">Script of Batch Processing</h4>
+<p>In Letswave7, the system runs a batch processing by running the corresponding Matlab script. Once the processing flow has been made, the corresponding Matlab script has already been generated automatically. Users can click the “<strong>script</strong>” button in the batch module to get the full script. Once the users have learned the use of GUI, they almost already understand the writing of script. <br />
+<img src="images/tu_ch4_3/Fig423.png" alt="Script of Batch Processing" />
+<img src="images/tu_ch4_3/Fig424.png" alt="Script of Batch Processing" /></p>
 
-<h3 id="script-of-single-step">Script of Single Step</h3>
-<p>The script for the single step operation can also be get with the “<strong>script</strong>” button in the lower right corner in each step of batch processing, which can tangibly reduce the users’ dependence on the tutorial and the help document. This feature is essential, since it can effectively help the script-based user to speed up the script writing and improve the quality of the script. More importantly, it can really reduce the script-based user’s entry threshold. Even the users without a solid background for Matlab programming are able to write high quality script for batch EEG signal processing.</p>
+<h4 id="script-of-single-step">Script of Single Step</h4>
+<p>The script for the single step operation can also be obtained with the “<strong>script</strong>” button in the lower right corner in each step of batch processing, which can tangibly reduce the users’ dependence on the tutorial and the help document. This feature is essential, since it can effectively help the script-based user to speed up the script writing and improve the quality of the script. More importantly, it can really reduce the script-based user’s entry threshold. Even the users without a solid background for Matlab programming are able to write high quality script for batch EEG signal processing.<br />
+<img src="images/tu_ch4_3/Fig423b.png" alt="Script of Batch Processing" /></p>
 
-<p>In Letswave, we provide a rich library of functions for the script-based users, which are starting with <strong>FLW_</strong>. The grammar of all the functions in this library is uniform. For one step of operation, we need just need define the option and then call the corresponding FLW function.</p>
+<p>In Letswave7, we provide a rich function library for the script-based users, which are starting with <strong>FLW_</strong>. The grammar of all the functions in this library is uniform. For one step of operation, we need just need define the option and then call the corresponding FLW function.</p>
 
 <div class="language-matlab highlighter-rouge"><pre class="highlight"><code><span class="n">option</span><span class="o">=</span><span class="nb">struct</span><span class="p">(</span><span class="s1">'XXX'</span><span class="p">,</span><span class="n">xxx</span><span class="p">,</span><span class="s1">'XXX'</span><span class="p">,</span><span class="n">xxx</span><span class="p">);</span>             
 <span class="n">lwdata</span><span class="o">=</span> <span class="n">FLW_XXX</span><span class="o">.</span><span class="n">get_lwdata</span><span class="p">(</span><span class="n">lwdata</span><span class="p">,</span><span class="n">option</span><span class="p">);</span>
@@ -422,18 +426,37 @@ $('#toc').on('click', 'a', function() {
 
 <p>The parameters setting in the option is identical to the parameters selection in the GUI. It just needs to be noticed whether the input and output of the function is a single dataset or multiple datasets.</p>
 
-<h3 id="easy-access-to-the-data">Easy Access to the Data</h3>
+<h4 id="easy-access-to-the-data">Easy Access to the Data</h4>
 <p>Each dataset can be easily accessed by clicking “<strong>send to workspace</strong>” in the right menu in the manager module, which would be appeared as a variable with the name of “<strong>lwdata</strong>” in the workspace of Matlab. Then the script-based user can make their own operation on the dataset in Matlab. After the operation, the user can also save the dataset in the format of Letswave by clicking “<strong>read from workspace</strong>” in the right menu in the manager module.</p>
 
 <p>Similarly, the other information is also easily to be accessed in the other modules, such as the event information, the channel name and statistical result about the mean, maximum and minimum value.</p>
 
-<h3 id="script-of-data-importing-and-figure-generation">Script of Data Importing and Figure Generation</h3>
-<p>Not only the operations in the batch module, the other operations, like data import and figure generation, can also be scriptlized.</p>
-
-<p>Hence, from data import, to preprocessing, time/frequency analysis and statistical analysis, to the final figure generation, the whole process can be easily and quickly written as a script for the EEG signal analysis.</p>
+<h4 id="script-of-data-importing-and-figure-generation">Script of Data Importing and Figure Generation</h4>
+<p>Not only the operations in the batch module, the other operations, like data import and figure generation, can also be scriptlized. Hence, from data import, to preprocessing, time/frequency analysis and statistical analysis, to the final figure generation, the whole process for the EEG signal signal analysis can be easily and quickly written as a script.</p>
 
 <h3 id="example">Example</h3>
+<p>Here, we repeat the data analysis of the P300 dataset for example to demonstrate the use of script in Letswave7.</p>
 
+<h4 id="script-1-data-importing">Script 1 Data Importing</h4>
+<p>Switch the Letswave path to “<strong>rawdata1</strong>”. Open the dialog of the data importing and select the dataset “Sub093.eeg”. Instead of clicking the button <strong>Run</strong>, we can click the button <strong>script</strong> to obtain the script for data import, which can be download as <a href="images/tu_ch4_3/script1.m.zip">script1.m</a>. Run script1 in Matlab, we can also load the dataset “Sub093” as it is by clicking the button <strong>Run</strong>.<br />
+<img src="images/tu_ch4_3/Fig425.png" alt="Script 1 Data Importing1" />
+<img src="images/tu_ch4_3/Fig426.png" alt="Script 1 Data Importing2" /></p>
+
+<h4 id="script-2-single-subject-analysis">Script 2 Single Subject Analysis</h4>
+<p>Open the batch processing “<strong>P300 Process.lw_script</strong>” that we saved in <a href="tu_ch4_2.html">Chapter 4-2</a>. Add the time-frequency analysis in <a href="tu_ch1_5.html">Chapter 1.5</a>. Instead of clicking the button <strong>Run</strong>, we can click the button <strong>script</strong> to have the script for single subject analysis, which can be download as <a href="images/tu_ch4_3/script2.m.zip">script2.m</a>. Run script2 in Matlab, we can also finish the single subject analysis as it is done in <a href="tu_ch1_signal_subject.html">Chapter 1</a>. <br />
+<img src="images/tu_ch4_3/Fig423.png" alt="Script 2 Single Subject Analysis" />
+<img src="images/tu_ch4_3/Fig424.png" alt="Script 2 Single Subject Analysis" /></p>
+
+<h4 id="script-3-single-subject-analysis-edited">Script 3 Single Subject Analysis (Edited)</h4>
+<p>Once you are familiar with Letswave script and Matlab programming, you can combine the two scripts into <a href="images/tu_ch4_3/script3.m.zip">script3.m</a> and edit it to improve efficient and change the name of the datasets for the further multiple subjects analysis.</p>
+
+<p>Run the <a href="images/tu_ch4_3/script3.m.zip">script3.m</a> in Matlab, we can have the averaged result “<strong>Sub093 P300 target</strong>” and “<strong>Sub093 P300 nontarget</strong>” for time domain analysis, “<strong>cwt Sub093 P300 target</strong>” and “<strong>cwt Sub093 P300 nontarget</strong>” for time frequency domain analysis.</p>
+
+<h4 id="script-4-figure-for-single-subject">Script 4 Figure for Single Subject</h4>
+<p>Select the dataset “Sub093 P300 nontarget.lw6”, “Sub093 P300 target.lw6”, “cwt Sub093 P300 target.lw6”, “cwt Sub093 P300 nontarget.lw6”. We can make the figure as it is shown in <a href="tu_ch3_1.html">Chapter 3.1</a>. Click the button <strong>script</strong> to get the script for figure generation which can be download as <a href="images/tu_ch4_3/script4.m.zip">script4.m</a>. Run the script4 in Matlab, we can have the similar figures, but the position of the legend need to be adjusted. <br /> 
+<img src="images/tu_ch3_1/Fig252.png" alt="Script 4 Figure for Single Subject" /></p>
+
+<h4 id="script-5-multiple-subject-analysis">Script 5 Multiple Subject Analysis</h4>
 
 
     <div class="tags">
@@ -451,7 +474,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 12, 2018 <br />
+ Site last generated: Sep 17, 2018 <br />
                 </div>
             </div>
 </footer>

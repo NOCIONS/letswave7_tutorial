@@ -408,7 +408,7 @@ $('#toc').on('click', 'a', function() {
   <h2 id="step-1-downsampling">Step 1: Downsampling</h2>
 <p>Considering the size of the example dataset for uploading and downloading, we downsample the datasets from 1000Hz to 250Hz.</p>
 
-<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and select “<strong>Edit-&gt;Resample Signals-&gt;Downsample signals (integer ratio)</strong>”. In the batch module, set the downsampling ratio to 4. Click the button <strong>Run</strong> for downsampling. Two new datasets with the name “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ds avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
+<p>Select datasets “<strong><em>avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and select “<strong>Edit-&gt;Resample Signals-&gt;Downsample signals (integer ratio)</strong>”. In the batch module, set the down sampling ratio to 4. Click the button <strong>Run</strong> for down sampling. Two new datasets with the name “<strong><em>ds avg bl reref ep_S  9 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” and “<strong><em>ds avg bl reref ep_S 10 sp_filter ica chan_interp butt sel_chan sub093</em></strong>” will be appeared in the data list of the manager module.<br />
 <br />
 <img src="images/tu_ch2_1/Fig061.png" alt="Dataset Rename" /></p>
 
@@ -422,7 +422,7 @@ $('#toc').on('click', 'a', function() {
 <h2 id="step-3-datasets-copy-and-merge">Step 3: Datasets Copy and Merge</h2>
 <p>For the multiple subjects analysis, we need to copy the time domain analysis results into to a new folder. For example, the datasets in the folder <strong>rawdata2</strong> is all the 93 subjects time domain analysis result, which can be downloaded <a href="https://github.com/NOCIONS/letswave7_tutorial/raw/master/rawdata2.zip">here (33M)</a>. Unzip the <strong><em>rawdata2.zip</em></strong> file, there are 93 datasets in 93*2 files.</p>
 
-<p>In the single subject analysis, the result is the average of all the trials for target and nontarget epochs. For multiple subjects analysis, we need firstly to merge the datasets from 93 subjects into one dataset, in which each subject in the new dataset is treated as an epoch. Select the tag “<strong>nontarget</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Select “<strong>Edit-&gt;Arrange signals-&gt;Merge dataset epochs, channels, indexes</strong>”. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to merge all the selected datasets in the condition of nontarget. 
+<p>In the single subject analysis, the result is the average of all the trials for target and nontarget epochs. For multiple subjects analysis, we need firstly to merge the datasets from 93 subjects into one dataset, in which each subject in the new dataset is treated as an epoch. Select the tag “<strong>nontarget</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Select “<strong>Edit-&gt;Arrange signals-&gt;Merge dataset epochs, channels, indexes</strong>”. Keep the default setting in the batch module, and click the button <strong>Run</strong> to merge all the selected datasets in the condition of nontarget. 
 <br />
 <img src="images/tu_ch2_1/Fig065.png" alt="Datasets Merge1" />
 <img src="images/tu_ch2_1/Fig066.png" alt="Datasets Merge2" /></p>
@@ -432,7 +432,7 @@ $('#toc').on('click', 'a', function() {
 <p>In result, the two new datasets, with 93 epochs for each, “<strong>merge_epoch Sub001 P300 nontarget</strong>” and “<strong>merge_epoch Sub001 P300 target</strong>”, which contain the time domain analysis results from 93 subjects in the conditions of “target” and “nontarget”.</p>
 
 <h2 id="step-4-grand-average">Step 4: Grand Average</h2>
-<p>Select the tag “<strong>merge_epoch</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Similar with the averaging operation in the single subject level, select <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong>. Keep the dafault setting in the batch module, and click the button <strong>Run</strong> to average all the epochs in the two datasets, which is actually run the grand average for all the subjects in the conditions of target and nontarget. Two new datasets with the name “<strong>avg merge_epoch Sub001 P300 nontarget</strong>” and “<strong>avg merge_epoch Sub001 P300 target</strong>” will be appeared in the data list of the manager module.
+<p>Select the tag “<strong>merge_epoch</strong>” in the <strong>include</strong> list box from the left part of the manager module, and select all the datasets in the dataset list box in the right part of the manager module. Similar with the averaging operation in the single subject level, select <strong>Process-&gt;Average-&gt;Compute averag, std, median across epochs</strong>. Keep the default setting in the batch module, and click the button <strong>Run</strong> to average all the epochs in the two datasets, which is actually run the grand average for all the subjects in the conditions of target and nontarget. Two new datasets with the name “<strong>avg merge_epoch Sub001 P300 nontarget</strong>” and “<strong>avg merge_epoch Sub001 P300 target</strong>” will be appeared in the data list of the manager module.
 <br />
 <img src="images/tu_ch2_1/Fig068.png" alt="Grand Average" /></p>
 
@@ -441,7 +441,7 @@ $('#toc').on('click', 'a', function() {
 <br />
 <img src="images/tu_ch2_1/Fig071.png" alt="Grand Average view1" /></p>
 
-<p>Select both the two datasets, and enable the <strong>interval selection</strong> button in the toolbar. Select the interval parameters for <strong>0.2</strong> to <strong>0.7</strong> seconds and click the “<strong>Table</strong>” button, the table for the statistic of maximum, minimum and mean value is poped up, in which we find the peak of the P300 component is 11.22 µV, happened at the 332 ms.<br />
+<p>Select both the two datasets, and enable the <strong>interval selection</strong> button in the toolbar. Select the interval parameters for <strong>0.2</strong> to <strong>0.7</strong> seconds and click the “<strong>Table</strong>” button, the table for the statistic of maximum, minimum and mean value is popped up, in which we find the peak of the P300 component is 11.22 µV, happened at the 332 ms.<br />
 <img src="images/tu_ch2_1/Fig072.png" alt="Grand Average view2" />
 <img src="images/tu_ch2_1/Fig073.png" alt="Grand Average view3" /></p>
 
@@ -466,7 +466,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Letswave.cn. All rights reserved. <br />
- Site last generated: Sep 12, 2018 <br />
+ Site last generated: Sep 16, 2018 <br />
                 </div>
             </div>
 </footer>
